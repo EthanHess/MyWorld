@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(15, 100, self.view.frame.size.width - 30, 200)];
+    [self.view addSubview:self.mapView];
+    
 }
 
 - (void)didReceiveMemoryWarning {

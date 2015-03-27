@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@import MapKit;
 
 @interface MainViewController : UIViewController
+
+@property (nonatomic, strong) UILabel *welcomeLabel;
+@property (nonatomic, strong) MKMapView *mapView;
 
 
 @end
