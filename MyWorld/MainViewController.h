@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) UILabel *welcomeLabel;
 @property (nonatomic, strong) MKMapView *mapView;
+@property (nonatomic, strong) UIToolbar *toolbar; 
 
 
 @end

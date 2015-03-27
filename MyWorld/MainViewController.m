@@ -20,12 +20,15 @@
     self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(15, 150, self.view.frame.size.width - 30, 300)];
     [self.view addSubview:self.mapView];
     
-    self.welcomeLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 80, self.view.frame.size.width - 100, 45)];
+    self.welcomeLabel = [[UILabel alloc]initWithFrame:CGRectMake(25, 80, self.view.frame.size.width - 50, 45)];
     self.welcomeLabel.font = [UIFont systemFontOfSize:32];
     self.welcomeLabel.text = @" Welcome to My World! ";
     self.welcomeLabel.backgroundColor = [UIColor lightGrayColor];
     [self.welcomeLabel sizeToFit];
     [self.view addSubview:self.welcomeLabel];
+    
+    self.toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 75, self.view.frame.size.width, 75)];
+    [self.view addSubview:self.toolbar];
     
     
 }
