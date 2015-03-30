@@ -39,6 +39,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     [self animateLabel:self.welcomeLabel duration:3.0];
     
+    [self setUpToolbar];
+
+    
+}
+
+- (void)setUpToolbar {
+    
     self.toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 75, self.view.frame.size.width, 75)];
     [self.view addSubview:self.toolbar];
     
@@ -52,9 +59,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIBarButtonItem *pictureButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddPicture:)];
     [pictureButton setBackgroundImage:photo forState:UIControlStateNormal barMetrics:nil];
     [buttons addObject:pictureButton];
-    
-//    UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:NULL];
-//    [buttons addObject:fixedSpace];
     
     UIBarButtonItem *flexItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [buttons addObject:flexItem];

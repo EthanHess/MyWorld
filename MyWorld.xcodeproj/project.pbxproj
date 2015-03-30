@@ -18,6 +18,7 @@
 		27CEF5C11AC9015700890179 /* UIColor+UIColorCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5C01AC9015700890179 /* UIColor+UIColorCategory.m */; };
 		27CEF5C41AC9CB0F00890179 /* PicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5C31AC9CB0F00890179 /* PicturesViewController.m */; };
 		27CEF5C71AC9CB2700890179 /* EntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5C61AC9CB2700890179 /* EntriesViewController.m */; };
+		27CEF5CB1AC9E30A00890179 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5CA1AC9E30A00890179 /* LocationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		27CEF5C31AC9CB0F00890179 /* PicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturesViewController.m; sourceTree = "<group>"; };
 		27CEF5C51AC9CB2700890179 /* EntriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntriesViewController.h; sourceTree = "<group>"; };
 		27CEF5C61AC9CB2700890179 /* EntriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntriesViewController.m; sourceTree = "<group>"; };
+		27CEF5C91AC9E30A00890179 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		27CEF5CA1AC9E30A00890179 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 		27CEF5C81AC9DF2700890179 /* Location Files */ = {
 			isa = PBXGroup;
 			children = (
+				27CEF5C91AC9E30A00890179 /* LocationController.h */,
+				27CEF5CA1AC9E30A00890179 /* LocationController.m */,
 			);
 			name = "Location Files";
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				27CEF5691AC6033B00890179 /* MapViewController.m in Sources */,
 				27CEF5661AC6033B00890179 /* AppDelegate.m in Sources */,
 				27CEF5C41AC9CB0F00890179 /* PicturesViewController.m in Sources */,
+				27CEF5CB1AC9E30A00890179 /* LocationController.m in Sources */,
 				27CEF5631AC6033B00890179 /* main.m in Sources */,
 				27CEF5C71AC9CB2700890179 /* EntriesViewController.m in Sources */,
 				27CEF5C11AC9015700890179 /* UIColor+UIColorCategory.m in Sources */,
