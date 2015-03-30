@@ -15,6 +15,7 @@
 		27CEF5711AC6033B00890179 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CEF56F1AC6033B00890179 /* LaunchScreen.xib */; };
 		27CEF57D1AC6033B00890179 /* MyWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF57C1AC6033B00890179 /* MyWorldTests.m */; };
 		27CEF58B1AC6122D00890179 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF58A1AC6122D00890179 /* Stack.m */; };
+		27CEF5C11AC9015700890179 /* UIColor+UIColorCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5C01AC9015700890179 /* UIColor+UIColorCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		27CEF57C1AC6033B00890179 /* MyWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWorldTests.m; sourceTree = "<group>"; };
 		27CEF5891AC6122D00890179 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stack.h; path = ../Stack.h; sourceTree = "<group>"; };
 		27CEF58A1AC6122D00890179 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stack.m; path = ../Stack.m; sourceTree = "<group>"; };
+		27CEF5BF1AC9015700890179 /* UIColor+UIColorCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorCategory.h"; sourceTree = "<group>"; };
+		27CEF5C01AC9015700890179 /* UIColor+UIColorCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 		27CEF5601AC6033B00890179 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				27CEF5BF1AC9015700890179 /* UIColor+UIColorCategory.h */,
+				27CEF5C01AC9015700890179 /* UIColor+UIColorCategory.m */,
 				27CEF5611AC6033B00890179 /* Info.plist */,
 				27CEF5621AC6033B00890179 /* main.m */,
 			);
@@ -260,6 +265,7 @@
 				27CEF5691AC6033B00890179 /* MainViewController.m in Sources */,
 				27CEF5661AC6033B00890179 /* AppDelegate.m in Sources */,
 				27CEF5631AC6033B00890179 /* main.m in Sources */,
+				27CEF5C11AC9015700890179 /* UIColor+UIColorCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

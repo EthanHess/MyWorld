@@ -18,6 +18,7 @@
     [super viewDidLoad];
     
     self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(15, 150, self.view.frame.size.width - 30, 300)];
+    [self.mapView setMapType:MKMapTypeSatellite]; 
     [self.view addSubview:self.mapView];
     
     self.welcomeLabel = [[UILabel alloc]initWithFrame:CGRectMake(25, 80, self.view.frame.size.width - 50, 45)];
@@ -30,8 +31,40 @@
     self.toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 75, self.view.frame.size.width, 75)];
     [self.view addSubview:self.toolbar];
     
+    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:3];
+    
+    UIBarButtonItem *pictureButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddPicture:)];
+    [buttons addObject:pictureButton];
+    
+//    UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:NULL];
+//    [buttons addObject:fixedSpace];
+    
+    UIBarButtonItem *entryButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddEntry:)];
+    [buttons addObject:entryButton];
+    
+    UIBarButtonItem *locationButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddLocation:)];
+    [buttons addObject:locationButton];
+    
+    [self.toolbar setItems:buttons];
     
 }
+
+- (void)goToAddPicture:(id)sender {
+    
+    
+}
+
+- (void)goToAddEntry:(id)sender {
+    
+    
+}
+
+- (void)goToAddLocation:(id)sender {
+    
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
