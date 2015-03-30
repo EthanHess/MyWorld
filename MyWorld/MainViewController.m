@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 
-@interface MainViewController ()
+@interface MainViewController () <MKMapViewDelegate>
 
 @end
 
@@ -18,7 +18,8 @@
     [super viewDidLoad];
     
     self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(15, 150, self.view.frame.size.width - 30, 300)];
-    [self.mapView setMapType:MKMapTypeSatellite]; 
+    [self.mapView setMapType:MKMapTypeSatellite];
+    self.mapView.delegate = self;
     [self.view addSubview:self.mapView];
     
     self.welcomeLabel = [[UILabel alloc]initWithFrame:CGRectMake(25, 80, self.view.frame.size.width - 50, 45)];
@@ -33,6 +34,10 @@
     
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:3];
     
+    UIImage *photo = [UIImage imageNamed:@"photo"];
+    UIImage *entry = [UIImage imageNamed:@"entry"];
+    UIImage *taj = [UIImage imageNamed:@"taj"];
+    
     UIBarButtonItem *pictureButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddPicture:)];
     [buttons addObject:pictureButton];
     
@@ -44,6 +49,9 @@
     
     UIBarButtonItem *locationButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddLocation:)];
     [buttons addObject:locationButton];
+    
+    UIBarButtonItem *removeButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(removeLocation)];
+    [buttons addObject:removeButton];
     
     [self.toolbar setItems:buttons];
     
@@ -60,6 +68,11 @@
 }
 
 - (void)goToAddLocation:(id)sender {
+    
+    
+}
+
+- (void)removeButton:(id)sender {
     
     
 }
