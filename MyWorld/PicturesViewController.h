@@ -10,6 +10,8 @@
 
 @interface PicturesViewController : UIViewController
 
-@property (nonatomic, strong) UIImagePickerController *imagePicker; 
+@property (nonatomic, strong) UIImagePickerController *imagePicker;
+@property (nonatomic, strong) UIImageView *image;
+@property (nonatomic, strong) UIButton *saveImageButton; 
 
 @end
