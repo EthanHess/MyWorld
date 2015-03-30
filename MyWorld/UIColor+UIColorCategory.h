@@ -14,4 +14,6 @@
 
 + (UIColor *)labelBackground;
 
++ (UIColor *)textLabelColor;
+
 @end

@@ -23,24 +23,34 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor backgroundColor]; 
+    self.view.backgroundColor = [UIColor backgroundColor];
+    
+    self.welcomeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, 45)];
+    self.welcomeLabel.text = @" Welcome to My World! ";
+    self.welcomeLabel.textColor = [UIColor textLabelColor];
+    [self.welcomeLabel setFont:[UIFont fontWithName:@"ChalkDuster" size:28]];
+    self.welcomeLabel.backgroundColor = [UIColor labelBackground];
+    [self.welcomeLabel sizeToFit];
+    [self.view addSubview:self.welcomeLabel];
+    
+    [self animateLabel:self.welcomeLabel duration:2.0];
+    
+    [self setUpMapView];
+    
+    [self setUpToolbar];
+
+    
+}
+
+- (void)setUpMapView {
     
     self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(15, 150, self.view.frame.size.width - 30, 300)];
     [self.mapView setMapType:MKMapTypeSatellite];
     self.mapView.delegate = self;
     [self.view addSubview:self.mapView];
     
-    self.welcomeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, 45)];
-    self.welcomeLabel.text = @" Welcome to My World! ";
-    [self.welcomeLabel setFont:[UIFont fontWithName:@"ChalkDuster" size:28]];
-    self.welcomeLabel.backgroundColor = [UIColor labelBackground];
-    [self.welcomeLabel sizeToFit];
-    [self.view addSubview:self.welcomeLabel];
-    
-    [self animateLabel:self.welcomeLabel duration:3.0];
-    
-    [self setUpToolbar];
-
+    UILongPressGestureRecognizer *pressRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressGesture:)];
+    [self.mapView addGestureRecognizer:pressRecognizer];
     
 }
 
@@ -78,6 +88,23 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [buttons addObject:removeButton];
     
     [self.toolbar setItems:buttons];
+    
+}
+
+- (void)handleLongPressGesture:(UIGestureRecognizer *)sender {
+    
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        [self.mapView removeGestureRecognizer:sender];
+    }
+    else {
+        
+        CGPoint point = [sender locationInView:self.mapView];
+        CLLocationCoordinate2D locCoord = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
+        
+        //add annotation here
+        
+        
+    }
     
 }
 

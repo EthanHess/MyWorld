@@ -16,10 +16,10 @@
 		27CEF57D1AC6033B00890179 /* MyWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF57C1AC6033B00890179 /* MyWorldTests.m */; };
 		27CEF58B1AC6122D00890179 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF58A1AC6122D00890179 /* Stack.m */; };
 		27CEF5C11AC9015700890179 /* UIColor+UIColorCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5C01AC9015700890179 /* UIColor+UIColorCategory.m */; };
-		27CEF5C41AC9CB0F00890179 /* PicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5C31AC9CB0F00890179 /* PicturesViewController.m */; };
-		27CEF5C71AC9CB2700890179 /* EntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5C61AC9CB2700890179 /* EntriesViewController.m */; };
-		27CEF5CB1AC9E30A00890179 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5CA1AC9E30A00890179 /* LocationController.m */; };
 		27CEF5CF1AC9EC2A00890179 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CEF5CE1AC9EC2A00890179 /* MapKit.framework */; };
+		27CEF5D21ACA065A00890179 /* EntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5D11ACA065A00890179 /* EntriesViewController.m */; };
+		27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5D41ACA068300890179 /* PicturesViewController.m */; };
+		27CEF5D81ACA06B700890179 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5D71ACA06B700890179 /* LocationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,13 +50,13 @@
 		27CEF58A1AC6122D00890179 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stack.m; path = ../Stack.m; sourceTree = "<group>"; };
 		27CEF5BF1AC9015700890179 /* UIColor+UIColorCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorCategory.h"; sourceTree = "<group>"; };
 		27CEF5C01AC9015700890179 /* UIColor+UIColorCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorCategory.m"; sourceTree = "<group>"; };
-		27CEF5C21AC9CB0F00890179 /* PicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicturesViewController.h; sourceTree = "<group>"; };
-		27CEF5C31AC9CB0F00890179 /* PicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturesViewController.m; sourceTree = "<group>"; };
-		27CEF5C51AC9CB2700890179 /* EntriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntriesViewController.h; sourceTree = "<group>"; };
-		27CEF5C61AC9CB2700890179 /* EntriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntriesViewController.m; sourceTree = "<group>"; };
-		27CEF5C91AC9E30A00890179 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
-		27CEF5CA1AC9E30A00890179 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		27CEF5CE1AC9EC2A00890179 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		27CEF5D01ACA065A00890179 /* EntriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntriesViewController.h; sourceTree = "<group>"; };
+		27CEF5D11ACA065A00890179 /* EntriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntriesViewController.m; sourceTree = "<group>"; };
+		27CEF5D31ACA068300890179 /* PicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicturesViewController.h; sourceTree = "<group>"; };
+		27CEF5D41ACA068300890179 /* PicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturesViewController.m; sourceTree = "<group>"; };
+		27CEF5D61ACA06B700890179 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		27CEF5D71ACA06B700890179 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +157,8 @@
 		27CEF5871AC60FDF00890179 /* Entry Files  */ = {
 			isa = PBXGroup;
 			children = (
-				27CEF5C51AC9CB2700890179 /* EntriesViewController.h */,
-				27CEF5C61AC9CB2700890179 /* EntriesViewController.m */,
+				27CEF5D01ACA065A00890179 /* EntriesViewController.h */,
+				27CEF5D11ACA065A00890179 /* EntriesViewController.m */,
 			);
 			name = "Entry Files ";
 			sourceTree = "<group>";
@@ -166,8 +166,8 @@
 		27CEF5881AC60FF800890179 /* Picture Files */ = {
 			isa = PBXGroup;
 			children = (
-				27CEF5C21AC9CB0F00890179 /* PicturesViewController.h */,
-				27CEF5C31AC9CB0F00890179 /* PicturesViewController.m */,
+				27CEF5D31ACA068300890179 /* PicturesViewController.h */,
+				27CEF5D41ACA068300890179 /* PicturesViewController.m */,
 			);
 			name = "Picture Files";
 			sourceTree = "<group>";
@@ -182,8 +182,8 @@
 		27CEF5C81AC9DF2700890179 /* Location Files */ = {
 			isa = PBXGroup;
 			children = (
-				27CEF5C91AC9E30A00890179 /* LocationController.h */,
-				27CEF5CA1AC9E30A00890179 /* LocationController.m */,
+				27CEF5D61ACA06B700890179 /* LocationController.h */,
+				27CEF5D71ACA06B700890179 /* LocationController.m */,
 			);
 			name = "Location Files";
 			sourceTree = "<group>";
@@ -289,12 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CEF58B1AC6122D00890179 /* Stack.m in Sources */,
+				27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */,
 				27CEF5691AC6033B00890179 /* MapViewController.m in Sources */,
 				27CEF5661AC6033B00890179 /* AppDelegate.m in Sources */,
-				27CEF5C41AC9CB0F00890179 /* PicturesViewController.m in Sources */,
-				27CEF5CB1AC9E30A00890179 /* LocationController.m in Sources */,
+				27CEF5D81ACA06B700890179 /* LocationController.m in Sources */,
+				27CEF5D21ACA065A00890179 /* EntriesViewController.m in Sources */,
 				27CEF5631AC6033B00890179 /* main.m in Sources */,
-				27CEF5C71AC9CB2700890179 /* EntriesViewController.m in Sources */,
 				27CEF5C11AC9015700890179 /* UIColor+UIColorCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

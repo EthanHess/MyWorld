@@ -22,5 +22,10 @@
     
 }
 
++ (UIColor *)textLabelColor {
+    
+    return [UIColor colorWithRed:0.2 green:0.8 blue:0.4 alpha:1.0];
+}
+
 
 @end

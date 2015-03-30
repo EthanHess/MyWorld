@@ -10,6 +10,6 @@
 
 @interface LocationController : NSObject
 
-+ (LocationController *)sharedInstance;
++ (LocationController *)sharedInstance; 
 
 @end
