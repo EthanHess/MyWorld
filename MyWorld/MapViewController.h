@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @import MapKit;
 
-@interface MainViewController : UIViewController
+@interface MapViewController : UIViewController
 
 @property (nonatomic, strong) UILabel *welcomeLabel;
 @property (nonatomic, strong) MKMapView *mapView;

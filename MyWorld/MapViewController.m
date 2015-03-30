@@ -6,13 +6,18 @@
 //  Copyright (c) 2015 Ethan Hess. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "MapViewController.h"
+#import "PicturesViewController.h"
+#import "EntriesViewController.h"
+#import <math.h>
 
-@interface MainViewController () <MKMapViewDelegate>
+static inline double radians (double degrees) {return degrees * M_PI/180;}
+
+@interface MapViewController () <MKMapViewDelegate>
 
 @end
 
-@implementation MainViewController
+@implementation MapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,12 +27,14 @@
     self.mapView.delegate = self;
     [self.view addSubview:self.mapView];
     
-    self.welcomeLabel = [[UILabel alloc]initWithFrame:CGRectMake(25, 80, self.view.frame.size.width - 50, 45)];
-    self.welcomeLabel.font = [UIFont systemFontOfSize:32];
+    self.welcomeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, 45)];
     self.welcomeLabel.text = @" Welcome to My World! ";
+    [self.welcomeLabel setFont:[UIFont fontWithName:@"ChalkDuster" size:28]];
     self.welcomeLabel.backgroundColor = [UIColor lightGrayColor];
     [self.welcomeLabel sizeToFit];
     [self.view addSubview:self.welcomeLabel];
+    
+    [self animateLabel:self.welcomeLabel duration:3.0];
     
     self.toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 75, self.view.frame.size.width, 75)];
     [self.view addSubview:self.toolbar];
@@ -73,11 +80,15 @@
 
 - (void)goToAddPicture:(id)sender {
     
+    PicturesViewController *picturesViewController = [PicturesViewController new];
+    [self.navigationController pushViewController:picturesViewController animated:YES];
     
 }
 
 - (void)goToAddEntry:(id)sender {
     
+    EntriesViewController *entriesViewController = [EntriesViewController new];
+    [self.navigationController pushViewController:entriesViewController animated:YES];
     
 }
 
@@ -88,6 +99,19 @@
 
 - (void)removeLocation:(id)sender {
     
+    
+}
+
+- (void)animateLabel:(UIView *)view duration:(float)duration {
+    
+    CGAffineTransform bigger = CGAffineTransformMakeScale(10, 10);
+    CGAffineTransform smaller = CGAffineTransformMakeScale(1, 1);
+    CGAffineTransform rotate = CGAffineTransformMakeRotation(radians(180));
+    [UIView animateWithDuration:duration animations:^{
+        view.transform = bigger;
+        view.transform = rotate;
+        view.transform = smaller;
+    }];
     
 }
 

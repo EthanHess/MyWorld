@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+#import "MapViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     
-    UINavigationController *navController = [[UINavigationController new]initWithRootViewController:[MainViewController new]];
+    UINavigationController *navController = [[UINavigationController new]initWithRootViewController:[MapViewController new]];
     
     self.window.rootViewController = navController;
     
