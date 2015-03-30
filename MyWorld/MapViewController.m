@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import "PicturesViewController.h"
 #import "EntriesViewController.h"
+#import "UIColor+UIColorCategory.h"
 #import <math.h>
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
@@ -22,6 +23,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor backgroundColor]; 
+    
     self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(15, 150, self.view.frame.size.width - 30, 300)];
     [self.mapView setMapType:MKMapTypeSatellite];
     self.mapView.delegate = self;
@@ -30,7 +33,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     self.welcomeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, 45)];
     self.welcomeLabel.text = @" Welcome to My World! ";
     [self.welcomeLabel setFont:[UIFont fontWithName:@"ChalkDuster" size:28]];
-    self.welcomeLabel.backgroundColor = [UIColor lightGrayColor];
+    self.welcomeLabel.backgroundColor = [UIColor labelBackground];
     [self.welcomeLabel sizeToFit];
     [self.view addSubview:self.welcomeLabel];
     

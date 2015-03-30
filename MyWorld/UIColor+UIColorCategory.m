@@ -10,4 +10,17 @@
 
 @implementation UIColor (UIColorCategory)
 
++ (UIColor *)backgroundColor {
+    
+    return [UIColor colorWithRed:0.0 green:0.3 blue:0.85 alpha:1.0];
+    
+}
+
++ (UIColor *)labelBackground {
+    
+    return [UIColor colorWithRed:0.3 green:0.35 blue:0.8 alpha:1.0];
+    
+}
+
+
 @end

@@ -10,4 +10,8 @@
 
 @interface UIColor (UIColorCategory)
 
++ (UIColor *)backgroundColor;
+
++ (UIColor *)labelBackground;
+
 @end
