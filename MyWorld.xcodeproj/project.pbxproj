@@ -19,6 +19,7 @@
 		27CEF5C41AC9CB0F00890179 /* PicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5C31AC9CB0F00890179 /* PicturesViewController.m */; };
 		27CEF5C71AC9CB2700890179 /* EntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5C61AC9CB2700890179 /* EntriesViewController.m */; };
 		27CEF5CB1AC9E30A00890179 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5CA1AC9E30A00890179 /* LocationController.m */; };
+		27CEF5CF1AC9EC2A00890179 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CEF5CE1AC9EC2A00890179 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		27CEF5C61AC9CB2700890179 /* EntriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntriesViewController.m; sourceTree = "<group>"; };
 		27CEF5C91AC9E30A00890179 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		27CEF5CA1AC9E30A00890179 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		27CEF5CE1AC9EC2A00890179 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CEF5CF1AC9EC2A00890179 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 		27CEF5541AC6033B00890179 = {
 			isa = PBXGroup;
 			children = (
+				27CEF5CE1AC9EC2A00890179 /* MapKit.framework */,
 				27CEF55F1AC6033B00890179 /* MyWorld */,
 				27CEF5791AC6033B00890179 /* MyWorldTests */,
 				27CEF55E1AC6033B00890179 /* Products */,

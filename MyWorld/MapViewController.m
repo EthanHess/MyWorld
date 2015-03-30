@@ -56,29 +56,25 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIImage *taj = [UIImage imageNamed:@"taj"];
     UIImage *trash = [UIImage imageNamed:@"trash"];
     
-    UIBarButtonItem *pictureButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddPicture:)];
-    [pictureButton setBackgroundImage:photo forState:UIControlStateNormal barMetrics:nil];
+    UIBarButtonItem *pictureButton = [[UIBarButtonItem alloc]initWithImage:photo style:UIBarButtonItemStylePlain target:self action:@selector(goToAddPicture:)];
     [buttons addObject:pictureButton];
     
     UIBarButtonItem *flexItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [buttons addObject:flexItem];
     
-    UIBarButtonItem *entryButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddEntry:)];
-    [entryButton setBackgroundImage:entry forState:UIControlStateNormal barMetrics:nil];
+    UIBarButtonItem *entryButton = [[UIBarButtonItem alloc]initWithImage:entry style:UIBarButtonItemStylePlain target:self action:@selector(goToAddEntry:)];
     [buttons addObject:entryButton];
     
     UIBarButtonItem *flexItem2 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [buttons addObject:flexItem2];
     
-    UIBarButtonItem *locationButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddLocation:)];
-    [locationButton setBackgroundImage:taj forState:UIControlStateNormal barMetrics:nil];
+    UIBarButtonItem *locationButton = [[UIBarButtonItem alloc]initWithImage:taj style:UIBarButtonItemStylePlain target:self action:@selector(goToAddLocation:)];
     [buttons addObject:locationButton];
     
     UIBarButtonItem *flexItem3 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [buttons addObject:flexItem3];
     
-    UIBarButtonItem *removeButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(removeLocation:)];
-    [removeButton setBackgroundImage:trash forState:UIControlStateNormal barMetrics:nil];
+    UIBarButtonItem *removeButton = [[UIBarButtonItem alloc]initWithImage:trash style:UIBarButtonItemStylePlain target:self action:@selector(removeLocation:)];
     [buttons addObject:removeButton];
     
     [self.toolbar setItems:buttons];
@@ -110,9 +106,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 }
 
 - (void)animateLabel:(UIView *)view duration:(float)duration {
-    
-    
-    
     
     CGAffineTransform bigger = CGAffineTransformMakeScale(10, 10);
     CGAffineTransform smaller = CGAffineTransformMakeScale(1, 1);
