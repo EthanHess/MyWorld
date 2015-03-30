@@ -37,20 +37,34 @@
     UIImage *photo = [UIImage imageNamed:@"photo"];
     UIImage *entry = [UIImage imageNamed:@"entry"];
     UIImage *taj = [UIImage imageNamed:@"taj"];
+    UIImage *trash = [UIImage imageNamed:@"trash"];
     
     UIBarButtonItem *pictureButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddPicture:)];
+    [pictureButton setBackgroundImage:photo forState:UIControlStateNormal barMetrics:nil];
     [buttons addObject:pictureButton];
     
 //    UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:NULL];
 //    [buttons addObject:fixedSpace];
     
+    UIBarButtonItem *flexItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [buttons addObject:flexItem];
+    
     UIBarButtonItem *entryButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddEntry:)];
+    [entryButton setBackgroundImage:entry forState:UIControlStateNormal barMetrics:nil];
     [buttons addObject:entryButton];
     
+    UIBarButtonItem *flexItem2 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [buttons addObject:flexItem2];
+    
     UIBarButtonItem *locationButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(goToAddLocation:)];
+    [locationButton setBackgroundImage:taj forState:UIControlStateNormal barMetrics:nil];
     [buttons addObject:locationButton];
     
-    UIBarButtonItem *removeButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(removeLocation)];
+    UIBarButtonItem *flexItem3 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [buttons addObject:flexItem3];
+    
+    UIBarButtonItem *removeButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(removeLocation:)];
+    [removeButton setBackgroundImage:trash forState:UIControlStateNormal barMetrics:nil];
     [buttons addObject:removeButton];
     
     [self.toolbar setItems:buttons];
@@ -72,7 +86,7 @@
     
 }
 
-- (void)removeButton:(id)sender {
+- (void)removeLocation:(id)sender {
     
     
 }
