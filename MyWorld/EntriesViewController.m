@@ -7,6 +7,7 @@
 //
 
 #import "EntriesViewController.h"
+#import "EntryController.h"
 #import "UIColor+UIColorCategory.h"
 
 @interface EntriesViewController () <UITableViewDelegate, UITextFieldDelegate, UITextViewDelegate>
@@ -62,6 +63,8 @@
 }
 
 - (void)addEntry:(id)sender {
+    
+    [[EntryController sharedInstance] addEntryWithEntryTitle:self.titleField.text entryText:self.entryField.text timestamp:[NSDate date]];
     
     
 }

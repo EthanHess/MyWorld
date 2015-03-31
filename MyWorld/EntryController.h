@@ -19,7 +19,7 @@
 
 + (EntryController *)sharedInstance;
 
-- (void)addEntryWithEntryTitle:(NSString *)title entryText:(NSString *)entryText timestamp: (NSDate *)timestamp toLocation:(NSString *)location;
+- (void)addEntryWithEntryTitle:(NSString *)title entryText:(NSString *)entryText timestamp: (NSDate *)timestamp; 
 
 - (void)removeEntry:(Entry *)entry;
 

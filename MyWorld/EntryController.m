@@ -21,11 +21,20 @@
     
 }
 
-- (void)addEntryWithEntryTitle:(NSString *)title entryText:(NSString *)entryText timestamp: (NSDate *)timestamp toLocation:(Location *)location {
+- (NSArray *)entries {
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Entry"];
+    
+    NSArray *objects = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+    
+    return objects;
+    
+}
+
+- (void)addEntryWithEntryTitle:(NSString *)title entryText:(NSString *)entryText timestamp: (NSDate *)timestamp {
     
     Entry *entry = [NSEntityDescription insertNewObjectForEntityForName:@"Entry" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     
-    entry.locations = location;
     entry.title = title;
     entry.entryText = entryText;
     entry.timestamp = timestamp;
