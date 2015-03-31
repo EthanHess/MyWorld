@@ -7,6 +7,7 @@
 //
 
 #import "PicturesViewController.h"
+#import "UIColor+UIColorCategory.h"
 
 @interface PicturesViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -16,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor backgroundColor];
     
     self.imagePicker = [[UIImagePickerController alloc]init];
     self.imagePicker.allowsEditing = YES;

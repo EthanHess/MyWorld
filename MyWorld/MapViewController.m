@@ -33,6 +33,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [self.welcomeLabel sizeToFit];
     [self.view addSubview:self.welcomeLabel];
     
+    [self.view bringSubviewToFront:self.welcomeLabel];
+    
     [self animateLabel:self.welcomeLabel duration:2.0];
     
     [self setUpMapView];

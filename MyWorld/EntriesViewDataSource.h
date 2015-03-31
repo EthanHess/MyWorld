@@ -11,4 +11,6 @@
 
 @interface EntriesViewDataSource : NSObject <UITableViewDataSource>
 
+- (void)registerTableView:(UITableView *)tableView; 
+
 @end

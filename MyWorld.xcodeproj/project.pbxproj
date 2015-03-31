@@ -21,6 +21,7 @@
 		27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5D41ACA068300890179 /* PicturesViewController.m */; };
 		27CEF5D81ACA06B700890179 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5D71ACA06B700890179 /* LocationController.m */; };
 		27CEF5DB1ACA4FF100890179 /* EntriesViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5DA1ACA4FF100890179 /* EntriesViewDataSource.m */; };
+		27CEF6771ACB243200890179 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6761ACB243200890179 /* EntryController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		27CEF5D71ACA06B700890179 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		27CEF5D91ACA4FF100890179 /* EntriesViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntriesViewDataSource.h; sourceTree = "<group>"; };
 		27CEF5DA1ACA4FF100890179 /* EntriesViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntriesViewDataSource.m; sourceTree = "<group>"; };
+		27CEF6751ACB243200890179 /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
+		27CEF6761ACB243200890179 /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				27CEF5D11ACA065A00890179 /* EntriesViewController.m */,
 				27CEF5D91ACA4FF100890179 /* EntriesViewDataSource.h */,
 				27CEF5DA1ACA4FF100890179 /* EntriesViewDataSource.m */,
+				27CEF6751ACB243200890179 /* EntryController.h */,
+				27CEF6761ACB243200890179 /* EntryController.m */,
 			);
 			name = "Entry Files ";
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CEF6771ACB243200890179 /* EntryController.m in Sources */,
 				27CEF58B1AC6122D00890179 /* Stack.m in Sources */,
 				27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */,
 				27CEF5DB1ACA4FF100890179 /* EntriesViewDataSource.m in Sources */,
