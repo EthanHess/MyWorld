@@ -10,6 +10,7 @@
 #import "PicturesViewController.h"
 #import "EntriesViewController.h"
 #import "UIColor+UIColorCategory.h"
+#import "MapAnnotation.h"
 #import <math.h>
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
@@ -67,6 +68,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UILongPressGestureRecognizer *pressRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressGesture:)];
     [self.mapView addGestureRecognizer:pressRecognizer];
     
+
+
+
+    
 }
 
 - (void)setUpToolbar {
@@ -117,7 +122,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         CLLocationCoordinate2D locCoord = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
         
         //add annotation here
-        
+        MapAnnotation *dropPin = [[MapAnnotation alloc] initWithLocation:locCoord];
+//        dropPin.latitude = locCoord.latitude;
+//        dropPin.coordinate.longitude = [NSNumber numberWithDouble:locCoord.longitude];
+        [self.mapView addAnnotation:dropPin];
         
     }
     

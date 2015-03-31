@@ -22,6 +22,10 @@
 		27CEF5D81ACA06B700890179 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5D71ACA06B700890179 /* LocationController.m */; };
 		27CEF5DB1ACA4FF100890179 /* EntriesViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5DA1ACA4FF100890179 /* EntriesViewDataSource.m */; };
 		27CEF6771ACB243200890179 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6761ACB243200890179 /* EntryController.m */; };
+		27CEF67A1ACB27A900890179 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6781ACB27A900890179 /* Model.xcdatamodeld */; };
+		27CEF6891ACB391400890179 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6881ACB391300890179 /* MapAnnotation.m */; };
+		27CEF68F1ACB3DC500890179 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF68E1ACB3DC500890179 /* Location.m */; };
+		27CEF6921ACB3DC600890179 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6911ACB3DC600890179 /* Entry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,13 @@
 		27CEF5DA1ACA4FF100890179 /* EntriesViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntriesViewDataSource.m; sourceTree = "<group>"; };
 		27CEF6751ACB243200890179 /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
 		27CEF6761ACB243200890179 /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
+		27CEF6791ACB27A900890179 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		27CEF6871ACB391300890179 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		27CEF6881ACB391300890179 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		27CEF68D1ACB3DC500890179 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		27CEF68E1ACB3DC500890179 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		27CEF6901ACB3DC600890179 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		27CEF6911ACB3DC600890179 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +122,8 @@
 				27CEF5651AC6033B00890179 /* AppDelegate.m */,
 				27CEF5671AC6033B00890179 /* MapViewController.h */,
 				27CEF5681AC6033B00890179 /* MapViewController.m */,
+				27CEF6871ACB391300890179 /* MapAnnotation.h */,
+				27CEF6881ACB391300890179 /* MapAnnotation.m */,
 				27CEF58C1AC6127900890179 /* Controllers */,
 				27CEF5891AC6122D00890179 /* Stack.h */,
 				27CEF58A1AC6122D00890179 /* Stack.m */,
@@ -169,6 +182,9 @@
 				27CEF5DA1ACA4FF100890179 /* EntriesViewDataSource.m */,
 				27CEF6751ACB243200890179 /* EntryController.h */,
 				27CEF6761ACB243200890179 /* EntryController.m */,
+				27CEF6781ACB27A900890179 /* Model.xcdatamodeld */,
+				27CEF6901ACB3DC600890179 /* Entry.h */,
+				27CEF6911ACB3DC600890179 /* Entry.m */,
 			);
 			name = "Entry Files ";
 			sourceTree = "<group>";
@@ -194,6 +210,8 @@
 			children = (
 				27CEF5D61ACA06B700890179 /* LocationController.h */,
 				27CEF5D71ACA06B700890179 /* LocationController.m */,
+				27CEF68D1ACB3DC500890179 /* Location.h */,
+				27CEF68E1ACB3DC500890179 /* Location.m */,
 			);
 			name = "Location Files";
 			sourceTree = "<group>";
@@ -299,6 +317,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CEF6771ACB243200890179 /* EntryController.m in Sources */,
+				27CEF68F1ACB3DC500890179 /* Location.m in Sources */,
+				27CEF6921ACB3DC600890179 /* Entry.m in Sources */,
 				27CEF58B1AC6122D00890179 /* Stack.m in Sources */,
 				27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */,
 				27CEF5DB1ACA4FF100890179 /* EntriesViewDataSource.m in Sources */,
@@ -307,7 +327,9 @@
 				27CEF5D81ACA06B700890179 /* LocationController.m in Sources */,
 				27CEF5D21ACA065A00890179 /* EntriesViewController.m in Sources */,
 				27CEF5631AC6033B00890179 /* main.m in Sources */,
+				27CEF67A1ACB27A900890179 /* Model.xcdatamodeld in Sources */,
 				27CEF5C11AC9015700890179 /* UIColor+UIColorCategory.m in Sources */,
+				27CEF6891ACB391400890179 /* MapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +532,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27CEF6781ACB27A900890179 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27CEF6791ACB27A900890179 /* Model.xcdatamodel */,
+			);
+			currentVersion = 27CEF6791ACB27A900890179 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 27CEF5551AC6033B00890179 /* Project object */;
 }

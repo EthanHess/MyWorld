@@ -21,4 +21,30 @@
     
 }
 
+- (void)addEntryWithEntryTitle:(NSString *)title entryText:(NSString *)entryText timestamp: (NSDate *)timestamp toLocation:(Location *)location {
+    
+    Entry *entry = [NSEntityDescription insertNewObjectForEntityForName:@"Entry" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    
+    entry.locations = location;
+    entry.title = title;
+    entry.entryText = entryText;
+    entry.timestamp = timestamp;
+    
+    [self synchronize];
+    
+    
+}
+
+- (void)removeEntry:(Entry *)entry {
+    
+    [entry.managedObjectContext deleteObject:entry];
+    
+}
+
+
+- (void)synchronize {
+    
+    [[Stack sharedInstance].managedObjectContext save:NULL]; 
+}
+
 @end

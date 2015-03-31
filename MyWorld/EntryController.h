@@ -7,9 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Stack.h" 
+#import "Entry.h"
+#import "Location.h"
 
 @interface EntryController : NSObject
 
+@property (nonatomic, strong, readonly) NSArray *entries;
+@property (nonatomic, strong) Entry *entry;
+@property (nonatomic, strong) Location *location;
+
 + (EntryController *)sharedInstance;
+
+- (void)addEntryWithEntryTitle:(NSString *)title entryText:(NSString *)entryText timestamp: (NSDate *)timestamp toLocation:(NSString *)location;
+
+- (void)removeEntry:(Entry *)entry;
+
+- (void)synchronize; 
 
 @end

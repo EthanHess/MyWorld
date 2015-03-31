@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Location.h"
 @import UIKit;
 
 @interface EntriesViewDataSource : NSObject <UITableViewDataSource>
 
-- (void)registerTableView:(UITableView *)tableView; 
+- (void)registerTableView:(UITableView *)tableView;
 
 @end

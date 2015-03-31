@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EntriesViewDataSource.h"
 
 @interface EntriesViewController : UIViewController
 
@@ -14,6 +15,7 @@
 @property (nonatomic, strong) UITextView *entryField;
 @property (nonatomic, strong) UIButton *addButton;
 @property (nonatomic, strong) UIButton *clearButton;
-@property (nonatomic, strong) UITableView *tableView; 
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) EntriesViewDataSource *dataSource;
 
 @end

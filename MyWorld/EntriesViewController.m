@@ -7,7 +7,6 @@
 //
 
 #import "EntriesViewController.h"
-#import "EntriesViewDataSource.h"
 #import "UIColor+UIColorCategory.h"
 
 @interface EntriesViewController () <UITableViewDelegate, UITextFieldDelegate, UITextViewDelegate>
@@ -51,6 +50,14 @@
 
 - (void)setUpTableView {
     
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 400, self.view.frame.size.width, self.view.frame.size.height - 400) style:UITableViewStyleGrouped];
+    
+    self.tableView.delegate = self;
+    self.dataSource = [EntriesViewDataSource new];
+    self.tableView.dataSource = self.dataSource;
+    [self.dataSource registerTableView:self.tableView];
+    
+    [self.view addSubview:self.tableView];
     
 }
 
