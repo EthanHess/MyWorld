@@ -20,6 +20,7 @@
 		27CEF5D21ACA065A00890179 /* EntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5D11ACA065A00890179 /* EntriesViewController.m */; };
 		27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5D41ACA068300890179 /* PicturesViewController.m */; };
 		27CEF5D81ACA06B700890179 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5D71ACA06B700890179 /* LocationController.m */; };
+		27CEF5DB1ACA4FF100890179 /* EntriesViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF5DA1ACA4FF100890179 /* EntriesViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		27CEF5D41ACA068300890179 /* PicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturesViewController.m; sourceTree = "<group>"; };
 		27CEF5D61ACA06B700890179 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		27CEF5D71ACA06B700890179 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		27CEF5D91ACA4FF100890179 /* EntriesViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntriesViewDataSource.h; sourceTree = "<group>"; };
+		27CEF5DA1ACA4FF100890179 /* EntriesViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntriesViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 			children = (
 				27CEF5D01ACA065A00890179 /* EntriesViewController.h */,
 				27CEF5D11ACA065A00890179 /* EntriesViewController.m */,
+				27CEF5D91ACA4FF100890179 /* EntriesViewDataSource.h */,
+				27CEF5DA1ACA4FF100890179 /* EntriesViewDataSource.m */,
 			);
 			name = "Entry Files ";
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 			files = (
 				27CEF58B1AC6122D00890179 /* Stack.m in Sources */,
 				27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */,
+				27CEF5DB1ACA4FF100890179 /* EntriesViewDataSource.m in Sources */,
 				27CEF5691AC6033B00890179 /* MapViewController.m in Sources */,
 				27CEF5661AC6033B00890179 /* AppDelegate.m in Sources */,
 				27CEF5D81ACA06B700890179 /* LocationController.m in Sources */,

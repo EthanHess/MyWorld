@@ -10,4 +10,10 @@
 
 @interface EntriesViewController : UIViewController
 
+@property (nonatomic, strong) UITextField *titleField;
+@property (nonatomic, strong) UITextView *entryField;
+@property (nonatomic, strong) UIButton *addButton;
+@property (nonatomic, strong) UIButton *clearButton;
+@property (nonatomic, strong) UITableView *tableView; 
+
 @end

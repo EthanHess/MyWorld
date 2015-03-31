@@ -42,6 +42,19 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
 }
 
+- (void)animateLabel:(UIView *)view duration:(float)duration {
+    
+    CGAffineTransform bigger = CGAffineTransformMakeScale(10, 10);
+    CGAffineTransform smaller = CGAffineTransformMakeScale(1, 1);
+    CGAffineTransform rotate = CGAffineTransformMakeRotation(radians(180));
+    [UIView animateWithDuration:duration animations:^{
+        view.transform = bigger;
+        view.transform = rotate;
+        view.transform = smaller;
+    }];
+    
+}
+
 - (void)setUpMapView {
     
     self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(15, 150, self.view.frame.size.width - 30, 300)];
@@ -132,18 +145,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
 }
 
-- (void)animateLabel:(UIView *)view duration:(float)duration {
-    
-    CGAffineTransform bigger = CGAffineTransformMakeScale(10, 10);
-    CGAffineTransform smaller = CGAffineTransformMakeScale(1, 1);
-    CGAffineTransform rotate = CGAffineTransformMakeRotation(radians(180));
-    [UIView animateWithDuration:duration animations:^{
-        view.transform = bigger;
-        view.transform = rotate;
-        view.transform = smaller;
-    }];
-    
-}
+
 
 
 
