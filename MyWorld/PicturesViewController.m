@@ -8,6 +8,7 @@
 
 #import "PicturesViewController.h"
 #import "UIColor+UIColorCategory.h"
+#import "CollectionViewController.h"
 
 @interface PicturesViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -49,9 +50,12 @@
     [self presentViewController:self.imagePicker animated:YES completion:nil]; 
 }
 
+
+
 - (void)seeImages:(id)sender {
     
-    
+    CollectionViewController *cvc = [CollectionViewController new];
+    [self.navigationController pushViewController:cvc animated:YES];
 }
 
 

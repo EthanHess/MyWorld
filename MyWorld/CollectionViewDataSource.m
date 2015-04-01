@@ -7,6 +7,7 @@
 //
 
 #import "CollectionViewDataSource.h"
+#import "UIColor+UIColorCategory.h"
 
 static NSString const *CellID = @"Cell";
 
@@ -20,7 +21,7 @@ static NSString const *CellID = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 1;
+    return 2;
     
 }
 
@@ -41,7 +42,7 @@ static NSString const *CellID = @"Cell";
     
     imageView.frame = cell.bounds;
     
-    cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [UIColor backgroundColor];
     
     return cell;
     
