@@ -131,6 +131,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
     
+    self.customView = [[CalloutView alloc]initWithFrame:CGRectMake(50, 50, 250, 250)];
+    
     [view addSubview:self.customView];
     
     

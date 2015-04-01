@@ -7,6 +7,7 @@
 //
 
 #import "MapAnnotation.h"
+#import "CalloutView.h"
 
 @implementation MapAnnotation
 @synthesize coordinate;
@@ -19,6 +20,17 @@
     return self;
 }
 
-
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    if (selected) {
+        CalloutView *calloutView = [CalloutView new];
+        [self addSubview:calloutView];
+        
+    } else {
+        
+    }
+    
+}
 
 @end
