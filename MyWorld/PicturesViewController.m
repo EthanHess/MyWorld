@@ -40,7 +40,7 @@
 
 - (void)saveImage:(id)sender {
     
-    
+    [self presentViewController:self.imagePicker animated:YES completion:nil]; 
 }
 
 - (void)didReceiveMemoryWarning {

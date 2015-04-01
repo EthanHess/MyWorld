@@ -17,6 +17,11 @@
 
 @implementation EntriesViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [self.tableView reloadData]; 
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -68,6 +73,7 @@
     [self.dataSource registerTableView:self.tableView];
     
     [self.view addSubview:self.tableView];
+    
     
 }
 

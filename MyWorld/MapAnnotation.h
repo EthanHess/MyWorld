@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 @import MapKit;
 
-@interface MapAnnotation : NSObject <MKAnnotation>{
+@interface MapAnnotation : MKAnnotationView <MKAnnotation>
+{
     CLLocationCoordinate2D coordinate;
 }
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, strong) NSString *locationName;
 @property (nonatomic, strong) NSArray *pictures;
 @property (nonatomic, strong) NSArray *entries;
 

@@ -27,6 +27,7 @@
 		27CEF68F1ACB3DC500890179 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF68E1ACB3DC500890179 /* Location.m */; };
 		27CEF6921ACB3DC600890179 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6911ACB3DC600890179 /* Entry.m */; };
 		27CEF6951ACB976D00890179 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6941ACB976D00890179 /* DetailViewController.m */; };
+		27CEF6981ACC751700890179 /* CalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6971ACC751700890179 /* CalloutView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		27CEF6911ACB3DC600890179 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 		27CEF6931ACB976D00890179 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		27CEF6941ACB976D00890179 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		27CEF6961ACC751700890179 /* CalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutView.h; sourceTree = "<group>"; };
+		27CEF6971ACC751700890179 /* CalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				27CEF5681AC6033B00890179 /* MapViewController.m */,
 				27CEF6871ACB391300890179 /* MapAnnotation.h */,
 				27CEF6881ACB391300890179 /* MapAnnotation.m */,
+				27CEF6961ACC751700890179 /* CalloutView.h */,
+				27CEF6971ACC751700890179 /* CalloutView.m */,
 				27CEF58C1AC6127900890179 /* Controllers */,
 				27CEF5891AC6122D00890179 /* Stack.h */,
 				27CEF58A1AC6122D00890179 /* Stack.m */,
@@ -328,6 +333,7 @@
 				27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */,
 				27CEF6951ACB976D00890179 /* DetailViewController.m in Sources */,
 				27CEF5DB1ACA4FF100890179 /* EntriesViewDataSource.m in Sources */,
+				27CEF6981ACC751700890179 /* CalloutView.m in Sources */,
 				27CEF5691AC6033B00890179 /* MapViewController.m in Sources */,
 				27CEF5661AC6033B00890179 /* AppDelegate.m in Sources */,
 				27CEF5D81ACA06B700890179 /* LocationController.m in Sources */,

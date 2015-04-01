@@ -27,7 +27,7 @@
     self.titleLabel.backgroundColor = [UIColor darkGreen];
     [self.view addSubview:self.titleLabel];
     
-    self.timeStampLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 170, 80, 50)];
+    self.timeStampLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 170, 225, 50)];
     self.timeStampLabel.backgroundColor = [UIColor darkGreen];
     [self.view addSubview:self.timeStampLabel];
     

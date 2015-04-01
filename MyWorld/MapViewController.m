@@ -67,8 +67,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     UILongPressGestureRecognizer *pressRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressGesture:)];
     [self.mapView addGestureRecognizer:pressRecognizer];
-    
-
 
 
     
@@ -128,6 +126,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         [self.mapView addAnnotation:dropPin];
         
     }
+    
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    
+    [view addSubview:self.customView];
+    
     
 }
 

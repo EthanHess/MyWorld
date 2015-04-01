@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Ethan Hess. All rights reserved.
 //
 
+#import "CalloutView.h"
 #import <UIKit/UIKit.h>
 @import MapKit;
 
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) UIToolbar *toolbar;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CalloutView *customView;
 
 
 @end
