@@ -64,12 +64,12 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [self.mapView setMapType:MKMapTypeSatellite];
     self.mapView.delegate = self;
     [self.view addSubview:self.mapView];
+    [self.view sendSubviewToBack:self.mapView];
     
     UILongPressGestureRecognizer *pressRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressGesture:)];
     [self.mapView addGestureRecognizer:pressRecognizer];
 
 
-    
 }
 
 - (void)setUpToolbar {
@@ -131,10 +131,11 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
     
-    self.customView = [[CalloutView alloc]initWithFrame:CGRectMake(50, 50, 250, 250)];
+    self.customView = [[CalloutView alloc]initWithFrame:CGRectMake(0, 0, 175, 290)];
     
-    [view addSubview:self.customView];
-    
+//    [view addSubview:self.customView];
+    [self.customView setHidden:NO];
+    [mapView addSubview:self.customView];
     
 }
 

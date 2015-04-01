@@ -36,12 +36,25 @@
     [self.saveImageButton addTarget:self action:@selector(saveImage:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.saveImageButton];
     
+    self.savedImages = [[UIButton alloc]initWithFrame:CGRectMake(75, 475, self.view.frame.size.width - 150, 50)];
+    [self.savedImages setTitle:@" Saved Images " forState:UIControlStateNormal];
+    [self.savedImages setBackgroundColor:[UIColor blueColor]];
+    [self.savedImages addTarget:self action:@selector(seeImages:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.savedImages];
+    
 }
 
 - (void)saveImage:(id)sender {
     
     [self presentViewController:self.imagePicker animated:YES completion:nil]; 
 }
+
+- (void)seeImages:(id)sender {
+    
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

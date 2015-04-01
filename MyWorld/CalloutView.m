@@ -8,6 +8,8 @@
 
 #import "CalloutView.h"
 #import "UIColor+UIColorCategory.h"
+#import "EntriesViewController.h"
+#import "PicturesViewController.h"
 
 
 @implementation CalloutView
@@ -19,23 +21,55 @@
         
         self.backgroundColor = [UIColor coolGreen];
         
-        self.seeEntries = [[UIButton alloc]initWithFrame:CGRectMake(15, 15, 150, 50)];
-        [self.seeEntries setTitle:@" See Entries " forState:UIControlStateNormal];
+        self.textField = [[UITextField alloc]initWithFrame:CGRectMake(15, 15, 150, 50)];
+        self.textField.placeholder = @" Location Name ";
+        self.textField.backgroundColor = [UIColor whiteColor]; 
+        [self addSubview:self.textField];
+        
+        self.seeEntries = [[UIButton alloc]initWithFrame:CGRectMake(15, 75, 150, 50)];
+        [self.seeEntries setTitle:@" Add Entry " forState:UIControlStateNormal];
         [self.seeEntries setBackgroundColor:[UIColor backgroundColor]];
-        [self.seeEntries setTitleColor:[UIColor labelBackground] forState:UIControlStateNormal];
+        [self.seeEntries setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.seeEntries addTarget:self action:@selector(entriesPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.seeEntries];
         
-        self.seePictures = [[UIButton alloc]initWithFrame:CGRectMake(15, 75, 150, 50)];
-        [self.seePictures setTitle:@" See Pictures " forState:UIControlStateNormal];
+        self.seePictures = [[UIButton alloc]initWithFrame:CGRectMake(15, 145, 150, 50)];
+        [self.seePictures setTitle:@" Add Photo " forState:UIControlStateNormal];
         [self.seePictures setBackgroundColor:[UIColor backgroundColor]];
-        [self.seePictures setTitleColor:[UIColor labelBackground] forState:UIControlStateNormal];
-        [self addSubview:self.seePictures]; 
+        [self.seePictures setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.seePictures addTarget:self action:@selector(picturesPressed:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:self.seePictures];
+        
+        self.cancelButton = [[UIButton alloc]initWithFrame:CGRectMake(15, 215, 150, 50)];
+        [self.cancelButton setTitle:@" Cancel " forState:UIControlStateNormal];
+        [self.cancelButton setBackgroundColor:[UIColor backgroundColor]];
+        [self.cancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.cancelButton addTarget:self action:@selector(cancelPressed:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:self.cancelButton];
         
         
     }
     
     return self;
     
+}
+
+- (void)entriesPressed:(id)sender {
+    
+    EntriesViewController *evc = [EntriesViewController new];
+    [[UIApplication sharedApplication].keyWindow.rootViewController.navigationController pushViewController:evc
+                                                                                                animated:YES];
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+- (void)picturesPressed:(id)sender {
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+- (void)cancelPressed:(id)sender {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    [self setHidden:YES];
 }
 
 

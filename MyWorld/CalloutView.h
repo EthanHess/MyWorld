@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CalloutView : UIView
+@interface CalloutView : UIView <UITextFieldDelegate>
 
+@property (nonatomic, strong) UITextField *textField; 
 @property (nonatomic, strong) UIButton *seeEntries;
 @property (nonatomic, strong) UIButton *seePictures;
+@property (nonatomic, strong) UIButton *cancelButton;
 
 @end

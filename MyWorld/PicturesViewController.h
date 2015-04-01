@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIImagePickerController *imagePicker;
 @property (nonatomic, strong) UIImageView *image;
-@property (nonatomic, strong) UIButton *saveImageButton; 
+@property (nonatomic, strong) UIButton *saveImageButton;
+@property (nonatomic, strong) UIButton *savedImages; 
 
 @end

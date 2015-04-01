@@ -28,6 +28,9 @@
 		27CEF6921ACB3DC600890179 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6911ACB3DC600890179 /* Entry.m */; };
 		27CEF6951ACB976D00890179 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6941ACB976D00890179 /* DetailViewController.m */; };
 		27CEF6981ACC751700890179 /* CalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6971ACC751700890179 /* CalloutView.m */; };
+		27CEF69B1ACCA5C800890179 /* PictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF69A1ACCA5C800890179 /* PictureController.m */; };
+		27CEF69E1ACCABAB00890179 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF69D1ACCABAB00890179 /* CollectionViewController.m */; };
+		27CEF6A11ACCABCC00890179 /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6A01ACCABCC00890179 /* CollectionViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,12 @@
 		27CEF6941ACB976D00890179 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		27CEF6961ACC751700890179 /* CalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutView.h; sourceTree = "<group>"; };
 		27CEF6971ACC751700890179 /* CalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutView.m; sourceTree = "<group>"; };
+		27CEF6991ACCA5C800890179 /* PictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureController.h; sourceTree = "<group>"; };
+		27CEF69A1ACCA5C800890179 /* PictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureController.m; sourceTree = "<group>"; };
+		27CEF69C1ACCABAB00890179 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		27CEF69D1ACCABAB00890179 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		27CEF69F1ACCABCC00890179 /* CollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSource.h; sourceTree = "<group>"; };
+		27CEF6A01ACCABCC00890179 /* CollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +213,12 @@
 			children = (
 				27CEF5D31ACA068300890179 /* PicturesViewController.h */,
 				27CEF5D41ACA068300890179 /* PicturesViewController.m */,
+				27CEF69C1ACCABAB00890179 /* CollectionViewController.h */,
+				27CEF69D1ACCABAB00890179 /* CollectionViewController.m */,
+				27CEF69F1ACCABCC00890179 /* CollectionViewDataSource.h */,
+				27CEF6A01ACCABCC00890179 /* CollectionViewDataSource.m */,
+				27CEF6991ACCA5C800890179 /* PictureController.h */,
+				27CEF69A1ACCA5C800890179 /* PictureController.m */,
 			);
 			name = "Picture Files";
 			sourceTree = "<group>";
@@ -328,12 +343,14 @@
 			files = (
 				27CEF6771ACB243200890179 /* EntryController.m in Sources */,
 				27CEF68F1ACB3DC500890179 /* Location.m in Sources */,
+				27CEF6A11ACCABCC00890179 /* CollectionViewDataSource.m in Sources */,
 				27CEF6921ACB3DC600890179 /* Entry.m in Sources */,
 				27CEF58B1AC6122D00890179 /* Stack.m in Sources */,
 				27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */,
 				27CEF6951ACB976D00890179 /* DetailViewController.m in Sources */,
 				27CEF5DB1ACA4FF100890179 /* EntriesViewDataSource.m in Sources */,
 				27CEF6981ACC751700890179 /* CalloutView.m in Sources */,
+				27CEF69E1ACCABAB00890179 /* CollectionViewController.m in Sources */,
 				27CEF5691AC6033B00890179 /* MapViewController.m in Sources */,
 				27CEF5661AC6033B00890179 /* AppDelegate.m in Sources */,
 				27CEF5D81ACA06B700890179 /* LocationController.m in Sources */,
@@ -342,6 +359,7 @@
 				27CEF67A1ACB27A900890179 /* Model.xcdatamodeld in Sources */,
 				27CEF5C11AC9015700890179 /* UIColor+UIColorCategory.m in Sources */,
 				27CEF6891ACB391400890179 /* MapAnnotation.m in Sources */,
+				27CEF69B1ACCA5C800890179 /* PictureController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
