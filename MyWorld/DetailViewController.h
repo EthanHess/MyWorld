@@ -16,4 +16,5 @@
 @property (nonatomic, strong) UILabel *entryLabel;
 @property (nonatomic, strong) Entry *entry;
 
+
 @end

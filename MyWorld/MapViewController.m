@@ -81,8 +81,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     UIImage *photo = [UIImage imageNamed:@"photo"];
     UIImage *entry = [UIImage imageNamed:@"entry"];
-    UIImage *taj = [UIImage imageNamed:@"taj"];
-    UIImage *trash = [UIImage imageNamed:@"trash"];
+    UIImage *taj = [UIImage imageNamed:@"help"];
+    UIImage *trash = [UIImage imageNamed:@"share"];
     
     UIBarButtonItem *pictureButton = [[UIBarButtonItem alloc]initWithImage:photo style:UIBarButtonItemStylePlain target:self action:@selector(goToAddPicture:)];
     [buttons addObject:pictureButton];

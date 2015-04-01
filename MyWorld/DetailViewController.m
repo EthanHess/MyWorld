@@ -17,11 +17,22 @@
 
 @implementation DetailViewController
 
+- (void)updateWithEntry:(Entry *)entry {
+    
+    self.entry = entry;
+    
+    self.titleLabel.text = entry.title;
+    self.entryLabel.text = entry.entryText;
+//    self.timeStampLabel.text = [NSString stringWithFormat:(@"%@", [entry.timestamp)]];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor coolGreen];
     
+                    
     self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 100, 200, 50)];
     //add text from entry
     self.titleLabel.backgroundColor = [UIColor darkGreen];
