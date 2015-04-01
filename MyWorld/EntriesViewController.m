@@ -9,6 +9,7 @@
 #import "EntriesViewController.h"
 #import "EntryController.h"
 #import "UIColor+UIColorCategory.h"
+#import "DetailViewController.h"
 
 @interface EntriesViewController () <UITableViewDelegate, UITextFieldDelegate, UITextViewDelegate>
 
@@ -49,6 +50,14 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    DetailViewController *detailViewController = [DetailViewController new];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    
+    
+}
+
 - (void)setUpTableView {
     
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 400, self.view.frame.size.width, self.view.frame.size.height - 400) style:UITableViewStyleGrouped];
@@ -62,6 +71,8 @@
     
 }
 
+
+
 - (void)addEntry:(id)sender {
     
     [[EntryController sharedInstance] addEntryWithEntryTitle:self.titleField.text entryText:self.entryField.text timestamp:[NSDate date]];
@@ -70,6 +81,7 @@
 }
 
 - (void)removeEntry:(id)sender {
+    
     
     
 }

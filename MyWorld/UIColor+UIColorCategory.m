@@ -27,5 +27,14 @@
     return [UIColor colorWithRed:0.2 green:0.8 blue:0.4 alpha:1.0];
 }
 
++ (UIColor *)coolGreen {
+    
+    return [UIColor colorWithRed:0.4 green:0.9 blue:0.2 alpha:1.0]; 
+}
+
++ (UIColor *)darkGreen {
+    
+    return [UIColor colorWithRed:0.5 green:0.7 blue:0.85 alpha:1.0];
+}
 
 @end

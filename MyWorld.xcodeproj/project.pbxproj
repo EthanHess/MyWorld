@@ -26,6 +26,7 @@
 		27CEF6891ACB391400890179 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6881ACB391300890179 /* MapAnnotation.m */; };
 		27CEF68F1ACB3DC500890179 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF68E1ACB3DC500890179 /* Location.m */; };
 		27CEF6921ACB3DC600890179 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6911ACB3DC600890179 /* Entry.m */; };
+		27CEF6951ACB976D00890179 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6941ACB976D00890179 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		27CEF68E1ACB3DC500890179 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		27CEF6901ACB3DC600890179 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
 		27CEF6911ACB3DC600890179 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		27CEF6931ACB976D00890179 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		27CEF6941ACB976D00890179 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				27CEF5D11ACA065A00890179 /* EntriesViewController.m */,
 				27CEF5D91ACA4FF100890179 /* EntriesViewDataSource.h */,
 				27CEF5DA1ACA4FF100890179 /* EntriesViewDataSource.m */,
+				27CEF6931ACB976D00890179 /* DetailViewController.h */,
+				27CEF6941ACB976D00890179 /* DetailViewController.m */,
 				27CEF6751ACB243200890179 /* EntryController.h */,
 				27CEF6761ACB243200890179 /* EntryController.m */,
 				27CEF6781ACB27A900890179 /* Model.xcdatamodeld */,
@@ -321,6 +326,7 @@
 				27CEF6921ACB3DC600890179 /* Entry.m in Sources */,
 				27CEF58B1AC6122D00890179 /* Stack.m in Sources */,
 				27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */,
+				27CEF6951ACB976D00890179 /* DetailViewController.m in Sources */,
 				27CEF5DB1ACA4FF100890179 /* EntriesViewDataSource.m in Sources */,
 				27CEF5691AC6033B00890179 /* MapViewController.m in Sources */,
 				27CEF5661AC6033B00890179 /* AppDelegate.m in Sources */,

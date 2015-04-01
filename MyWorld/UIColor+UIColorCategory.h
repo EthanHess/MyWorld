@@ -16,4 +16,8 @@
 
 + (UIColor *)textLabelColor;
 
++ (UIColor *)coolGreen;
+
++ (UIColor *)darkGreen; 
+
 @end

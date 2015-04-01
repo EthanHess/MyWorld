@@ -9,6 +9,7 @@
 #import "EntriesViewDataSource.h"
 #import "Entry.h"
 #import "EntryController.h"
+#import "UIColor+UIColorCategory.h"
 
 static NSString *const CellID = @"cellID";
 
@@ -40,9 +41,10 @@ static NSString *const CellID = @"cellID";
     Entry *entry = [[EntryController sharedInstance].entries objectAtIndex:indexPath.row];
     cell.textLabel.text = entry.title;
     cell.textLabel.font = [UIFont fontWithName:@"Chalkduster" size:24];
-    cell.textLabel.textColor = [UIColor grayColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.text = entry.entryText;
     cell.imageView.image = [UIImage imageNamed:@""];
-    cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [UIColor backgroundColor];
     
     return cell;
     
@@ -53,6 +55,25 @@ static NSString *const CellID = @"cellID";
     
     return 50.0;
 }
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        [tableView beginUpdates];
+        
+        [[EntryController sharedInstance] removeEntry:[EntryController sharedInstance].entries[indexPath.row]];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        [tableView endUpdates];
+    }
+    
+    
+    
+}
+
+
 
 
 @end
