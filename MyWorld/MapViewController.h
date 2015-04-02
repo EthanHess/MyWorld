@@ -17,6 +17,8 @@
 @property (nonatomic, strong) UIToolbar *toolbar;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CalloutView *customView;
+@property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic, strong) UIButton *button;
 
 
 @end

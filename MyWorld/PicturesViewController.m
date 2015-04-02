@@ -24,7 +24,7 @@
     self.imagePicker = [[UIImagePickerController alloc]init];
     self.imagePicker.allowsEditing = YES;
     self.imagePicker.delegate = self;
-    self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         [self.imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
@@ -34,8 +34,7 @@
         [self.imagePicker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
     }
     
-    [self.view addSubview:self.imagePicker.view];
-    
+
     
     self.imageView = [[UIImageView alloc]initWithFrame:CGRectMake(50, 100, self.view.frame.size.width - 100, self.view.frame.size.width - 100)];
     self.imageView.backgroundColor = [UIColor lightGrayColor];
@@ -44,7 +43,7 @@
     self.saveImageButton = [[UIButton alloc]initWithFrame:CGRectMake(75, 400, self.view.frame.size.width - 150, 50)];
     [self.saveImageButton setTitle:@" Add Image " forState:UIControlStateNormal];
     [self.saveImageButton setBackgroundColor:[UIColor blueColor]];
-    [self.saveImageButton addTarget:self action:@selector(imagePickerController:didFinishPickingMediaWithInfo:) forControlEvents:UIControlEventTouchUpInside];
+    [self.saveImageButton addTarget:self action:@selector(presentImagePicker:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.saveImageButton];
     
     self.savedImages = [[UIButton alloc]initWithFrame:CGRectMake(75, 475, self.view.frame.size.width - 150, 50)];
@@ -55,13 +54,22 @@
     
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+
+- (void)presentImagePicker:(id)sender {
     
     [self presentViewController:self.imagePicker animated:YES completion:nil];
+}
+
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
+        
     self.chosenImage = info[UIImagePickerControllerEditedImage];
-    
     self.imageView.image = self.chosenImage;
+        
+//    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
 
 }
 

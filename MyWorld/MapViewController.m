@@ -15,7 +15,7 @@
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
-@interface MapViewController () <MKMapViewDelegate, UIActionSheetDelegate>
+@interface MapViewController () <MKMapViewDelegate, UIActionSheetDelegate, UISearchBarDelegate>
 
 @end
 
@@ -41,14 +41,18 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [self setUpMapView];
     
     [self setUpToolbar];
+    
+    [self setUpSearch];
 
     [self registerForNotificaitons];
+    
     
 }
 
 - (void)registerForNotificaitons {
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showEntryView) name:@"entriesButtonPressed" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showPictureView) name:@"picturesButtonPressed" object:nil];
 }
 
 - (void)animateLabel:(UIView *)view duration:(float)duration {
@@ -61,6 +65,29 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         view.transform = rotate;
         view.transform = smaller;
     }];
+    
+}
+
+- (void)setUpSearch {
+    
+    self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(15, 480, 285, 50)];
+    self.searchBar.backgroundColor = [UIColor whiteColor];
+    self.searchBar.placeholder = @" Search Location ";
+    self.searchBar.delegate = self;
+    [self.view addSubview:self.searchBar];
+    
+    self.button = [[UIButton alloc]initWithFrame:CGRectMake(315, 480, 50, 50)];
+    [self.button setTitle:@" Go! " forState:UIControlStateNormal];
+    [self.button setBackgroundColor:[UIColor coolGreen]];
+    [self.button addTarget:self action:@selector(searchBarPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.button];
+    
+    
+    
+}
+
+-(void)searchBarPressed:(UISearchBar *)searchBar {
+    
     
 }
 
@@ -159,10 +186,19 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
 }
 
+- (void)showPictureView {
+    
+    PicturesViewController *picturesViewController = [PicturesViewController new];
+    [self.navigationController pushViewController:picturesViewController animated:YES];
+    
+}
+
 - (void)showEntryView {
+    
     EntriesViewController *entriesViewController = [EntriesViewController new];
     [self.navigationController pushViewController:entriesViewController animated:YES];
 }
+
 
 - (void)randomButtonPressed:(id)sender {
     

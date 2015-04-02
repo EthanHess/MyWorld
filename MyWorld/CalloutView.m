@@ -63,6 +63,7 @@
 
 - (void)picturesPressed:(id)sender {
     
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"picturesButtonPressed" object:nil]; 
 
 }
 

@@ -36,14 +36,21 @@
                     
     self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 100, 200, 50)];
     self.titleLabel.backgroundColor = [UIColor darkGreen];
+    self.titleLabel.font = [UIFont fontWithName:@"Chalkduster" size:16];
+    self.titleLabel.textColor = [UIColor brownColor];
     [self.view addSubview:self.titleLabel];
     
     self.timeStampLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 170, 225, 50)];
     self.timeStampLabel.backgroundColor = [UIColor darkGreen];
+    self.timeStampLabel.font = [UIFont fontWithName:@"Chalkduster" size:16];
+    self.timeStampLabel.textColor = [UIColor brownColor];
     [self.view addSubview:self.timeStampLabel];
     
     self.entryLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 240, 250, 350)];
     self.entryLabel.backgroundColor = [UIColor darkGreen];
+    self.entryLabel.font = [UIFont fontWithName:@"Chalkduster" size:16];
+    self.entryLabel.textColor = [UIColor brownColor];
+    self.entryLabel.numberOfLines = 0;
     [self.view addSubview:self.entryLabel];
     
     [self updateWithEntry:self.entry]; 
