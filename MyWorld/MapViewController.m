@@ -12,6 +12,7 @@
 #import "UIColor+UIColorCategory.h"
 #import "MapAnnotation.h"
 #import <math.h>
+@import CoreLocation;
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
@@ -100,12 +101,15 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         MKCoordinateSpan span;
         double radius = placemark.region.radius / 1000;
         
+//        CLCircularRegion *region = [CLCircularRegion alloc] initWithCenter:<#(CLLocationCoordinate2D)#> radius:<#(CLLocationDistance)#> identifier:<#(NSString *)#>
+        
         NSLog(@"[searchBarSearchButtonClicked] Radius is %f", radius);
         span.latitudeDelta = radius / 112.0;
         
         region.span = span;
         
         [self.mapView setRegion:region animated:YES];
+        
     }];
     
     

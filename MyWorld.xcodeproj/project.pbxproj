@@ -31,6 +31,7 @@
 		27CEF69B1ACCA5C800890179 /* PictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF69A1ACCA5C800890179 /* PictureController.m */; };
 		27CEF69E1ACCABAB00890179 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF69D1ACCABAB00890179 /* CollectionViewController.m */; };
 		27CEF6A11ACCABCC00890179 /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6A01ACCABCC00890179 /* CollectionViewDataSource.m */; };
+		27CEF71C1ACDFF5800890179 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF71B1ACDFF5800890179 /* Picture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		27CEF69D1ACCABAB00890179 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		27CEF69F1ACCABCC00890179 /* CollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSource.h; sourceTree = "<group>"; };
 		27CEF6A01ACCABCC00890179 /* CollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDataSource.m; sourceTree = "<group>"; };
+		27CEF71A1ACDFF5800890179 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		27CEF71B1ACDFF5800890179 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +222,8 @@
 				27CEF6A01ACCABCC00890179 /* CollectionViewDataSource.m */,
 				27CEF6991ACCA5C800890179 /* PictureController.h */,
 				27CEF69A1ACCA5C800890179 /* PictureController.m */,
+				27CEF71A1ACDFF5800890179 /* Picture.h */,
+				27CEF71B1ACDFF5800890179 /* Picture.m */,
 			);
 			name = "Picture Files";
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 				27CEF5D21ACA065A00890179 /* EntriesViewController.m in Sources */,
 				27CEF5631AC6033B00890179 /* main.m in Sources */,
 				27CEF67A1ACB27A900890179 /* Model.xcdatamodeld in Sources */,
+				27CEF71C1ACDFF5800890179 /* Picture.m in Sources */,
 				27CEF5C11AC9015700890179 /* UIColor+UIColorCategory.m in Sources */,
 				27CEF6891ACB391400890179 /* MapAnnotation.m in Sources */,
 				27CEF69B1ACCA5C800890179 /* PictureController.m in Sources */,
