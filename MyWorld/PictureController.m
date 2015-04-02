@@ -7,6 +7,9 @@
 //
 
 #import "PictureController.h"
+#import "Stack.h"
+@import UIKit;
+
 
 @implementation PictureController
 
@@ -21,7 +24,30 @@
     
 }
 
+- (NSArray *)pictures {
 
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@""];
+
+    NSArray *objects = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+
+    return objects;
+    
+}
+
+- (void)addPictureWithImage:(UIImage *)image {
+    
+//    NSData* data = UIImageJPEGRepresentation(image, COMPRESSION_QUALITY);
+    
+
+}
+
+//remove picture method here
+
+- (void)synchronize {
+    
+    [[Stack sharedInstance].managedObjectContext save:NULL];
+    
+}
 
 
 

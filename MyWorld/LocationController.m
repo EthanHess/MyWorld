@@ -7,6 +7,9 @@
 //
 
 #import "LocationController.h"
+#import "Stack.h"
+#import "Location.h"
+@import CoreData;
 
 @implementation LocationController
 
@@ -19,6 +22,29 @@
     
     return sharedInstance;
     
+}
+
+- (NSArray *)locations {
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Location"];
+    
+    NSArray *objects = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+    
+    return objects;
+    
+}
+
+- (void)addLocationWithName:(NSString *)name {
+    
+    
+    
+}
+
+//remove location
+
+- (void)synchronize {
+    
+    [[Stack sharedInstance].managedObjectContext save:NULL]; 
 }
 
 @end

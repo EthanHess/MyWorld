@@ -88,6 +88,26 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(void)searchBarPressed:(UISearchBar *)searchBar {
     
+    [searchBar resignFirstResponder];
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder geocodeAddressString:searchBar.text completionHandler:^(NSArray *placemarks, NSError *error) {
+        
+        
+        CLPlacemark *placemark = [placemarks objectAtIndex:0];
+        MKCoordinateRegion region;
+        region.center.latitude = placemark.region.center.latitude;
+        region.center.longitude = placemark.region.center.longitude;
+        MKCoordinateSpan span;
+        double radius = placemark.region.radius / 1000;
+        
+        NSLog(@"[searchBarSearchButtonClicked] Radius is %f", radius);
+        span.latitudeDelta = radius / 112.0;
+        
+        region.span = span;
+        
+        [self.mapView setRegion:region animated:YES];
+    }];
+    
     
 }
 

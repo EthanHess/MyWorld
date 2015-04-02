@@ -11,8 +11,12 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Entry" inverseName="locations" inverseEntity="Entry" syncable="YES"/>
     </entity>
+    <entity name="Picture" syncable="YES">
+        <attribute name="image" optional="YES" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Entry" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Location" positionX="-54" positionY="18" width="128" height="88"/>
+        <element name="Picture" positionX="-45" positionY="45" width="128" height="60"/>
     </elements>
 </model>

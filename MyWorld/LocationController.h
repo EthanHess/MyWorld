@@ -10,6 +10,8 @@
 
 @interface LocationController : NSObject
 
+@property (nonatomic, strong, readonly) NSArray *locations;
+
 + (LocationController *)sharedInstance; 
 
 @end
