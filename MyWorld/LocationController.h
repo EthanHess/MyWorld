@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Location.h"
 
 @interface LocationController : NSObject
 
 @property (nonatomic, strong, readonly) NSArray *locations;
 
-+ (LocationController *)sharedInstance; 
++ (LocationController *)sharedInstance;
+
+- (NSArray *)locations;
+
+- (void)addLocationWithName:(NSString *)name;
+
+- (void)removeLocation:(Location *)location;
+
 
 @end

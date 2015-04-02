@@ -8,7 +8,6 @@
 
 #import "LocationController.h"
 #import "Stack.h"
-#import "Location.h"
 @import CoreData;
 
 @implementation LocationController
@@ -36,11 +35,22 @@
 
 - (void)addLocationWithName:(NSString *)name {
     
+    Location *location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    
+    location.name = name;
+    
+    [self synchronize];
     
     
 }
 
-//remove location
+- (void)removeLocation:(Location *)location {
+    
+    [location.managedObjectContext deleteObject:location];
+    
+    [self synchronize];
+    
+}
 
 - (void)synchronize {
     

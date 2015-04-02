@@ -7,9 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Picture.h"
+@import UIKit;
 
 @interface PictureController : NSObject
 
-@property (nonatomic, strong, readonly) NSArray *pictures; 
+@property (nonatomic, strong, readonly) NSArray *pictures;
+
++ (PictureController *)sharedInstance;
+
+- (NSArray *)pictures;
+
+- (void)addPictureWithImage:(UIImage *)image;
+
+- (void)removePicture:(Picture *)picture;
+
 
 @end

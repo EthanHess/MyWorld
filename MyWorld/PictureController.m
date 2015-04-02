@@ -8,7 +8,6 @@
 
 #import "PictureController.h"
 #import "Stack.h"
-@import UIKit;
 
 
 @implementation PictureController
@@ -38,10 +37,24 @@
     
 //    NSData* data = UIImageJPEGRepresentation(image, COMPRESSION_QUALITY);
     
+    NSData *data = [NSData new];
+    
+    Picture *picture = [NSEntityDescription insertNewObjectForEntityForName:@"Picture" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    
+    picture.image = data;
+    
+    //^^Fix here, make sure method gets passed data!
+    
+    [self synchronize];
 
 }
 
-//remove picture method here
+- (void)removePicture:(Picture *)picture {
+    
+    [picture.managedObjectContext deleteObject:picture];
+    
+    [self synchronize]; 
+}
 
 - (void)synchronize {
     
