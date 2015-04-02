@@ -23,7 +23,8 @@
     
     self.titleLabel.text = entry.title;
     self.entryLabel.text = entry.entryText;
-//    self.timeStampLabel.text = [NSString stringWithFormat:(@"%@", [entry.timestamp)]];
+    self.timeStampLabel.text = [NSString stringWithFormat:@"%@", entry.timestamp];
+    
 }
 
 
@@ -34,7 +35,6 @@
     
                     
     self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 100, 200, 50)];
-    //add text from entry
     self.titleLabel.backgroundColor = [UIColor darkGreen];
     [self.view addSubview:self.titleLabel];
     
@@ -46,6 +46,7 @@
     self.entryLabel.backgroundColor = [UIColor darkGreen];
     [self.view addSubview:self.entryLabel];
     
+    [self updateWithEntry:self.entry]; 
     
 }
 

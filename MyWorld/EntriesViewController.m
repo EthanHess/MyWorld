@@ -58,6 +58,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     DetailViewController *detailViewController = [DetailViewController new];
+    detailViewController.entry = [EntryController sharedInstance].entries[indexPath.row];
     [self.navigationController pushViewController:detailViewController animated:YES];
     
     

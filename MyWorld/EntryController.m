@@ -48,6 +48,8 @@
     
     [entry.managedObjectContext deleteObject:entry];
     
+    [self synchronize]; 
+    
 }
 
 

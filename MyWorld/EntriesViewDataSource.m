@@ -37,13 +37,14 @@ static NSString *const CellID = @"cellID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+    cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellID];
     
     Entry *entry = [[EntryController sharedInstance].entries objectAtIndex:indexPath.row];
     cell.textLabel.text = entry.title;
-    cell.textLabel.font = [UIFont fontWithName:@"Chalkduster" size:24];
+    cell.textLabel.font = [UIFont fontWithName:@"Chalkduster" size:16];
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.text = entry.entryText;
-    cell.imageView.image = [UIImage imageNamed:@""];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", entry.timestamp];
+//    cell.imageView.image = [UIImage imageNamed:@""];
     cell.backgroundColor = [UIColor backgroundColor];
     
     return cell;

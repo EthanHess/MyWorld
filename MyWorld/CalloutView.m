@@ -56,19 +56,18 @@
 
 - (void)entriesPressed:(id)sender {
     
-    EntriesViewController *evc = [EntriesViewController new];
-    [[UIApplication sharedApplication].keyWindow.rootViewController.navigationController pushViewController:evc
-                                                                                                animated:YES];
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"entriesButtonPressed" object:nil];
+    
+
 }
 
 - (void)picturesPressed:(id)sender {
     
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+
 }
 
 - (void)cancelPressed:(id)sender {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+
     [self setHidden:YES];
 }
 

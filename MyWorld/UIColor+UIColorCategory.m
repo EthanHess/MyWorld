@@ -12,7 +12,7 @@
 
 + (UIColor *)backgroundColor {
     
-    return [UIColor colorWithRed:0.0 green:0.3 blue:0.85 alpha:1.0];
+    return [UIColor colorWithRed:0.1 green:0.2 blue:0.9 alpha:0.5];
     
 }
 

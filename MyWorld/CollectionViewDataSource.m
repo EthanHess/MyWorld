@@ -21,7 +21,7 @@ static NSString const *CellID = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 2;
+    return 4;
     
 }
 
@@ -36,11 +36,11 @@ static NSString const *CellID = @"Cell";
     }
     
     
-    UIImage *image = [UIImage imageNamed:@""];
-    
-    UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
-    
-    imageView.frame = cell.bounds;
+//    UIImage *image = [UIImage imageNamed:@""];
+//    
+//    UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
+//    
+//    imageView.frame = cell.bounds;
     
     cell.backgroundColor = [UIColor backgroundColor];
     

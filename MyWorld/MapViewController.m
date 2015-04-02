@@ -15,7 +15,7 @@
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
-@interface MapViewController () <MKMapViewDelegate>
+@interface MapViewController () <MKMapViewDelegate, UIActionSheetDelegate>
 
 @end
 
@@ -42,7 +42,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     [self setUpToolbar];
 
+    [self registerForNotificaitons];
     
+}
+
+- (void)registerForNotificaitons {
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showEntryView) name:@"entriesButtonPressed" object:nil];
 }
 
 - (void)animateLabel:(UIView *)view duration:(float)duration {
@@ -96,14 +102,14 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UIBarButtonItem *flexItem2 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [buttons addObject:flexItem2];
     
-    UIBarButtonItem *locationButton = [[UIBarButtonItem alloc]initWithImage:taj style:UIBarButtonItemStylePlain target:self action:@selector(goToAddLocation:)];
-    [buttons addObject:locationButton];
+    UIBarButtonItem *randomButton = [[UIBarButtonItem alloc]initWithImage:taj style:UIBarButtonItemStylePlain target:self action:@selector(randomButtonPressed:)];
+    [buttons addObject:randomButton];
     
     UIBarButtonItem *flexItem3 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [buttons addObject:flexItem3];
     
-    UIBarButtonItem *removeButton = [[UIBarButtonItem alloc]initWithImage:trash style:UIBarButtonItemStylePlain target:self action:@selector(removeLocation:)];
-    [buttons addObject:removeButton];
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc]initWithImage:trash style:UIBarButtonItemStylePlain target:self action:@selector(shareButtonPressed:)];
+    [buttons addObject:shareButton];
     
     [self.toolbar setItems:buttons];
     
@@ -153,13 +159,22 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
 }
 
-- (void)goToAddLocation:(id)sender {
+- (void)showEntryView {
+    EntriesViewController *entriesViewController = [EntriesViewController new];
+    [self.navigationController pushViewController:entriesViewController animated:YES];
+}
+
+- (void)randomButtonPressed:(id)sender {
     
     
 }
 
-- (void)removeLocation:(id)sender {
+- (void)shareButtonPressed:(id)sender {
     
+    NSString *string = @"";
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc]initWithActivityItems:@[string] applicationActivities:nil];
+    [self presentViewController:activityViewController animated:YES completion:nil];
     
 }
 
