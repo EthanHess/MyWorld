@@ -25,7 +25,7 @@
 
 - (NSArray *)pictures {
 
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@""];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Picture"];
 
     NSArray *objects = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:NULL];
 
@@ -35,9 +35,8 @@
 
 - (void)addPictureWithImage:(UIImage *)image {
     
-//    NSData* data = UIImageJPEGRepresentation(image, COMPRESSION_QUALITY);
     
-    NSData *data = [NSData new];
+    NSData *data = [NSData dataWithData:UIImageJPEGRepresentation(image, 100)];
     
     Picture *picture = [NSEntityDescription insertNewObjectForEntityForName:@"Picture" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     

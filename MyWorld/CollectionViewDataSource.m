@@ -7,6 +7,7 @@
 //
 
 #import "CollectionViewDataSource.h"
+#import "PictureController.h"
 #import "UIColor+UIColorCategory.h"
 
 static NSString const *CellID = @"Cell";
@@ -21,7 +22,7 @@ static NSString const *CellID = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 4;
+    return [PictureController sharedInstance].pictures.count;
     
 }
 
@@ -35,13 +36,13 @@ static NSString const *CellID = @"Cell";
         [view removeFromSuperview];
     }
     
+    Picture *thumbnail =[PictureController sharedInstance].pictures[indexPath.row];
+    UIImage *image = [UIImage imageWithData:thumbnail.image];
     
-//    UIImage *image = [UIImage imageNamed:@""];
-//    
-//    UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
-//    
-//    imageView.frame = cell.bounds;
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
     
+    imageView.frame = cell.bounds;
+    [cell addSubview:imageView];
     cell.backgroundColor = [UIColor backgroundColor];
     
     return cell;

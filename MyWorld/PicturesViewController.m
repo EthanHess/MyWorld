@@ -9,6 +9,7 @@
 #import "PicturesViewController.h"
 #import "UIColor+UIColorCategory.h"
 #import "CollectionViewController.h"
+#import "PictureController.h"
 
 @interface PicturesViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -40,14 +41,20 @@
     self.imageView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.imageView];
     
-    self.saveImageButton = [[UIButton alloc]initWithFrame:CGRectMake(75, 400, self.view.frame.size.width - 150, 50)];
-    [self.saveImageButton setTitle:@" Add Image " forState:UIControlStateNormal];
-    [self.saveImageButton setBackgroundColor:[UIColor blueColor]];
-    [self.saveImageButton addTarget:self action:@selector(presentImagePicker:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.saveImageButton];
+    self.searchImageButton = [[UIButton alloc]initWithFrame:CGRectMake(75, 400, self.view.frame.size.width - 150, 50)];
+    [self.searchImageButton setTitle:@" Add Image " forState:UIControlStateNormal];
+    [self.searchImageButton setBackgroundColor:[UIColor blueColor]];
+    [self.searchImageButton addTarget:self action:@selector(presentImagePicker:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.searchImageButton];
     
-    self.savedImages = [[UIButton alloc]initWithFrame:CGRectMake(75, 475, self.view.frame.size.width - 150, 50)];
-    [self.savedImages setTitle:@" Saved Images " forState:UIControlStateNormal];
+    self.savePictureButton = [[UIButton alloc]initWithFrame:CGRectMake(75, 475, self.view.frame.size.width - 150, 50)];
+    [self.savePictureButton setTitle:@" Save Image " forState:UIControlStateNormal];
+    [self.savePictureButton setBackgroundColor:[UIColor blueColor]];
+    [self.savePictureButton addTarget:self action:@selector(saveImage:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.savePictureButton];
+    
+    self.savedImages = [[UIButton alloc]initWithFrame:CGRectMake(75, 550, self.view.frame.size.width - 150, 50)];
+    [self.savedImages setTitle:@" Image Archives " forState:UIControlStateNormal];
     [self.savedImages setBackgroundColor:[UIColor blueColor]];
     [self.savedImages addTarget:self action:@selector(seeImages:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.savedImages];
@@ -68,9 +75,15 @@
     self.chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = self.chosenImage;
         
-//    [picker dismissViewControllerAnimated:YES completion:NULL];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
     
 
+}
+
+- (void)saveImage:(id)sender {
+    
+    [[PictureController sharedInstance] addPictureWithImage:self.chosenImage];
+    
 }
 
 

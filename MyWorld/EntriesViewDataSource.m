@@ -39,12 +39,22 @@ static NSString *const CellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
     cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellID];
     
+    
     Entry *entry = [[EntryController sharedInstance].entries objectAtIndex:indexPath.row];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd MMM yyyy -- HH:mm"];
+//    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:162000];
+    NSDate *date = entry.timestamp;
+    NSString *formattedDateString = [dateFormatter stringFromDate:date];
+    
     cell.textLabel.text = entry.title;
     cell.textLabel.font = [UIFont fontWithName:@"Chalkduster" size:16];
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", entry.timestamp];
-//    cell.imageView.image = [UIImage imageNamed:@""];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", formattedDateString];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"Chalkduster" size:12];
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
+//  cell.imageView.image = [UIImage imageNamed:@""];
     cell.backgroundColor = [UIColor backgroundColor];
     
     return cell;

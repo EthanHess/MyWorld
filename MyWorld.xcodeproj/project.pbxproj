@@ -24,14 +24,14 @@
 		27CEF6771ACB243200890179 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6761ACB243200890179 /* EntryController.m */; };
 		27CEF67A1ACB27A900890179 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6781ACB27A900890179 /* Model.xcdatamodeld */; };
 		27CEF6891ACB391400890179 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6881ACB391300890179 /* MapAnnotation.m */; };
-		27CEF68F1ACB3DC500890179 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF68E1ACB3DC500890179 /* Location.m */; };
-		27CEF6921ACB3DC600890179 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6911ACB3DC600890179 /* Entry.m */; };
 		27CEF6951ACB976D00890179 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6941ACB976D00890179 /* DetailViewController.m */; };
 		27CEF6981ACC751700890179 /* CalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6971ACC751700890179 /* CalloutView.m */; };
 		27CEF69B1ACCA5C800890179 /* PictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF69A1ACCA5C800890179 /* PictureController.m */; };
 		27CEF69E1ACCABAB00890179 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF69D1ACCABAB00890179 /* CollectionViewController.m */; };
 		27CEF6A11ACCABCC00890179 /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF6A01ACCABCC00890179 /* CollectionViewDataSource.m */; };
-		27CEF71C1ACDFF5800890179 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF71B1ACDFF5800890179 /* Picture.m */; };
+		27CEF7D81ACF488000890179 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF7D71ACF488000890179 /* Location.m */; };
+		27CEF7DB1ACF488100890179 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF7DA1ACF488100890179 /* Entry.m */; };
+		27CEF7DE1ACF488100890179 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF7DD1ACF488100890179 /* Picture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,10 +76,6 @@
 		27CEF6791ACB27A900890179 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		27CEF6871ACB391300890179 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		27CEF6881ACB391300890179 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
-		27CEF68D1ACB3DC500890179 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		27CEF68E1ACB3DC500890179 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		27CEF6901ACB3DC600890179 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
-		27CEF6911ACB3DC600890179 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 		27CEF6931ACB976D00890179 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		27CEF6941ACB976D00890179 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		27CEF6961ACC751700890179 /* CalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutView.h; sourceTree = "<group>"; };
@@ -90,8 +86,12 @@
 		27CEF69D1ACCABAB00890179 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		27CEF69F1ACCABCC00890179 /* CollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSource.h; sourceTree = "<group>"; };
 		27CEF6A01ACCABCC00890179 /* CollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDataSource.m; sourceTree = "<group>"; };
-		27CEF71A1ACDFF5800890179 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
-		27CEF71B1ACDFF5800890179 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		27CEF7D61ACF488000890179 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = ../Location.h; sourceTree = "<group>"; };
+		27CEF7D71ACF488000890179 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = ../Location.m; sourceTree = "<group>"; };
+		27CEF7D91ACF488100890179 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entry.h; path = ../Entry.h; sourceTree = "<group>"; };
+		27CEF7DA1ACF488100890179 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entry.m; path = ../Entry.m; sourceTree = "<group>"; };
+		27CEF7DC1ACF488100890179 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Picture.h; path = ../Picture.h; sourceTree = "<group>"; };
+		27CEF7DD1ACF488100890179 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Picture.m; path = ../Picture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,9 +204,9 @@
 				27CEF6941ACB976D00890179 /* DetailViewController.m */,
 				27CEF6751ACB243200890179 /* EntryController.h */,
 				27CEF6761ACB243200890179 /* EntryController.m */,
+				27CEF7D91ACF488100890179 /* Entry.h */,
+				27CEF7DA1ACF488100890179 /* Entry.m */,
 				27CEF6781ACB27A900890179 /* Model.xcdatamodeld */,
-				27CEF6901ACB3DC600890179 /* Entry.h */,
-				27CEF6911ACB3DC600890179 /* Entry.m */,
 			);
 			name = "Entry Files ";
 			sourceTree = "<group>";
@@ -222,8 +222,8 @@
 				27CEF6A01ACCABCC00890179 /* CollectionViewDataSource.m */,
 				27CEF6991ACCA5C800890179 /* PictureController.h */,
 				27CEF69A1ACCA5C800890179 /* PictureController.m */,
-				27CEF71A1ACDFF5800890179 /* Picture.h */,
-				27CEF71B1ACDFF5800890179 /* Picture.m */,
+				27CEF7DC1ACF488100890179 /* Picture.h */,
+				27CEF7DD1ACF488100890179 /* Picture.m */,
 			);
 			name = "Picture Files";
 			sourceTree = "<group>";
@@ -240,8 +240,8 @@
 			children = (
 				27CEF5D61ACA06B700890179 /* LocationController.h */,
 				27CEF5D71ACA06B700890179 /* LocationController.m */,
-				27CEF68D1ACB3DC500890179 /* Location.h */,
-				27CEF68E1ACB3DC500890179 /* Location.m */,
+				27CEF7D61ACF488000890179 /* Location.h */,
+				27CEF7D71ACF488000890179 /* Location.m */,
 			);
 			name = "Location Files";
 			sourceTree = "<group>";
@@ -347,11 +347,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CEF6771ACB243200890179 /* EntryController.m in Sources */,
-				27CEF68F1ACB3DC500890179 /* Location.m in Sources */,
+				27CEF7DB1ACF488100890179 /* Entry.m in Sources */,
 				27CEF6A11ACCABCC00890179 /* CollectionViewDataSource.m in Sources */,
-				27CEF6921ACB3DC600890179 /* Entry.m in Sources */,
 				27CEF58B1AC6122D00890179 /* Stack.m in Sources */,
 				27CEF5D51ACA068300890179 /* PicturesViewController.m in Sources */,
+				27CEF7D81ACF488000890179 /* Location.m in Sources */,
 				27CEF6951ACB976D00890179 /* DetailViewController.m in Sources */,
 				27CEF5DB1ACA4FF100890179 /* EntriesViewDataSource.m in Sources */,
 				27CEF6981ACC751700890179 /* CalloutView.m in Sources */,
@@ -362,7 +362,7 @@
 				27CEF5D21ACA065A00890179 /* EntriesViewController.m in Sources */,
 				27CEF5631AC6033B00890179 /* main.m in Sources */,
 				27CEF67A1ACB27A900890179 /* Model.xcdatamodeld in Sources */,
-				27CEF71C1ACDFF5800890179 /* Picture.m in Sources */,
+				27CEF7DE1ACF488100890179 /* Picture.m in Sources */,
 				27CEF5C11AC9015700890179 /* UIColor+UIColorCategory.m in Sources */,
 				27CEF6891ACB391400890179 /* MapAnnotation.m in Sources */,
 				27CEF69B1ACCA5C800890179 /* PictureController.m in Sources */,

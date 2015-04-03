@@ -231,7 +231,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)shareButtonPressed:(id)sender {
     
-    NSString *string = @"";
+    NSString *string = @"This is my string";
     
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc]initWithActivityItems:@[string] applicationActivities:nil];
     [self presentViewController:activityViewController animated:YES completion:nil];
