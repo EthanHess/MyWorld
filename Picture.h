@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Location;
 
 @interface Picture : NSManagedObject
 
 @property (nonatomic, retain) NSData * image;
+@property (nonatomic, retain) Location *location;
 
 @end

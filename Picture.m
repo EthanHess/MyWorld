@@ -7,10 +7,12 @@
 //
 
 #import "Picture.h"
+#import "Location.h"
 
 
 @implementation Picture
 
 @dynamic image;
+@dynamic location;
 
 @end

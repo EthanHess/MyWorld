@@ -33,11 +33,14 @@
     
 }
 
-- (void)addLocationWithName:(NSString *)name {
+- (void)addLocationWithName:(NSString *)name date:(NSDate *)date latitude:(NSString *)latitude longitude:(NSString *)longitude {
     
     Location *location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     
     location.name = name;
+    location.date = date;
+    location.latitude = latitude;
+    location.longitute = longitude;
     
     [self synchronize];
     

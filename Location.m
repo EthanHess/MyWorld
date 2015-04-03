@@ -8,6 +8,7 @@
 
 #import "Location.h"
 #import "Entry.h"
+#import "Picture.h"
 
 
 @implementation Location
@@ -17,5 +18,6 @@
 @dynamic longitute;
 @dynamic name;
 @dynamic entries;
+@dynamic pictures;
 
 @end

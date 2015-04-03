@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Entry;
+@class Entry, Picture;
 
 @interface Location : NSManagedObject
 
@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSString * longitute;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSOrderedSet *entries;
+@property (nonatomic, retain) NSOrderedSet *pictures;
 @end
 
 @interface Location (CoreDataGeneratedAccessors)
@@ -32,4 +33,14 @@
 - (void)removeEntriesObject:(Entry *)value;
 - (void)addEntries:(NSOrderedSet *)values;
 - (void)removeEntries:(NSOrderedSet *)values;
+- (void)insertObject:(Picture *)value inPicturesAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromPicturesAtIndex:(NSUInteger)idx;
+- (void)insertPictures:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removePicturesAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInPicturesAtIndex:(NSUInteger)idx withObject:(Picture *)value;
+- (void)replacePicturesAtIndexes:(NSIndexSet *)indexes withPictures:(NSArray *)values;
+- (void)addPicturesObject:(Picture *)value;
+- (void)removePicturesObject:(Picture *)value;
+- (void)addPictures:(NSOrderedSet *)values;
+- (void)removePictures:(NSOrderedSet *)values;
 @end

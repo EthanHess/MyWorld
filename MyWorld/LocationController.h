@@ -17,7 +17,7 @@
 
 - (NSArray *)locations;
 
-- (void)addLocationWithName:(NSString *)name;
+- (void)addLocationWithName:(NSString *)name date:(NSDate *)date latitude:(NSString *)latitude longitude:(NSString *)longitude;
 
 - (void)removeLocation:(Location *)location;
 

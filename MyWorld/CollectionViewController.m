@@ -46,6 +46,13 @@
     return CGSizeMake((self.view.frame.size.width / 2) - 8,180);
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@" Delete " message:@" Are you sure you want to delete this picture? " delegate:self cancelButtonTitle:@" Cancel " otherButtonTitles:@" Yes ", nil];
+    [alertView show];
+    
+    
+}
 
 
 - (void)didReceiveMemoryWarning {
