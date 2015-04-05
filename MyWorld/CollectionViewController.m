@@ -8,9 +8,13 @@
 
 #import "CollectionViewController.h"
 #import "UIColor+UIColorCategory.h"
+#import "PictureController.h"
 #import "Location.h"
 
 @interface CollectionViewController ()
+
+@property (nonatomic, assign) NSInteger arrayIndex;
+
 
 @end
 
@@ -48,12 +52,34 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@" Delete " message:@" Are you sure you want to delete this picture? " delegate:self cancelButtonTitle:@" Cancel " otherButtonTitles:@" Yes ", nil];
-    [alertView show];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Delete" message:@"Delete Picture?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes", nil];
+    [alert show];
+    
+    self.arrayIndex = indexPath.item;
+
     
     
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+        
+        NSMutableArray *mutableArray = [NSMutableArray arrayWithArray: [PictureController sharedInstance].pictures];
+        
+//        [[PictureController sharedInstance]removePicture:self.arrayIndex];
+        
+//        [mutableArray removeObjectAtIndex:self.arrayIndex];
+        [PictureController sharedInstance].pictures = mutableArray;
+        
+        [self refreshData];
+    }
+}
+
+- (void)refreshData {
+    
+    [self.collectionView reloadData];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

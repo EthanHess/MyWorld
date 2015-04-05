@@ -84,6 +84,14 @@
     
     [[PictureController sharedInstance] addPictureWithImage:self.chosenImage];
     
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@" Image Saved! " message:nil delegate:self cancelButtonTitle:@" Okay! " otherButtonTitles:nil, nil];
+    
+    [alertView show]; 
+    
+//    CollectionViewController *collectionViewController;
+//    
+//    [self.navigationController pushViewController:collectionViewController animated:YES];
+    
 }
 
 

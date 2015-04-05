@@ -84,6 +84,11 @@
     
     [[EntryController sharedInstance] addEntryWithEntryTitle:self.titleField.text entryText:self.entryField.text timestamp:[NSDate date]];
     
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Entry Added!" message:nil delegate:self cancelButtonTitle:@" Okay! " otherButtonTitles:nil, nil];
+    
+    [alertView show];
+    
+    [self clearFields]; 
     
 }
 
@@ -92,6 +97,12 @@
     self.titleField.text = @"";
     self.entryField.text = @""; 
     
+}
+
+- (void)clearFields {
+    
+    self.titleField.text = @"";
+    self.entryField.text = @"";
 }
 
 - (void)didReceiveMemoryWarning {

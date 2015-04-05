@@ -12,7 +12,7 @@
 
 @interface PictureController : NSObject
 
-@property (nonatomic, strong, readonly) NSArray *pictures;
+@property (nonatomic, strong) NSArray *pictures;
 
 + (PictureController *)sharedInstance;
 
