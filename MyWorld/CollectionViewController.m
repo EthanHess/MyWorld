@@ -11,7 +11,7 @@
 #import "PictureController.h"
 #import "Location.h"
 
-@interface CollectionViewController ()
+@interface CollectionViewController () <UIAlertViewDelegate>
 
 @property (nonatomic, assign) NSInteger arrayIndex;
 
@@ -57,24 +57,27 @@
     
     self.arrayIndex = indexPath.item;
     
-//    [[PictureController sharedInstance]removePicture:indexPath.item];
+
 
     
     
 }
 
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     if (buttonIndex == 1) {
         
-        NSMutableArray *mutableArray = [NSMutableArray arrayWithArray: [PictureController sharedInstance].pictures];
+        Picture *pictureSelected = [[PictureController sharedInstance].pictures objectAtIndex:self.arrayIndex];
         
-//        [[PictureController sharedInstance]removePicture:self.arrayIndex];
+        [[PictureController sharedInstance]removePicture:pictureSelected];
         
-//        [mutableArray removeObjectAtIndex:self.arrayIndex];
-        [PictureController sharedInstance].pictures = mutableArray;
         
         [self refreshData];
+        
+    } else
+    {
+        return;
     }
 }
 

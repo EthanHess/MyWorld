@@ -17,7 +17,7 @@
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
-@interface MapViewController () <MKMapViewDelegate, UIActionSheetDelegate, UISearchBarDelegate>
+@interface MapViewController () <MKMapViewDelegate, UIActionSheetDelegate, UISearchBarDelegate, CLLocationManagerDelegate>
 
 @end
 
@@ -47,6 +47,21 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [self setUpSearch];
 
     [self registerForNotificaitons];
+    
+    [self setUpLocationManager]; 
+    
+    
+    
+}
+
+- (void)setUpLocationManager {
+    
+    self.locationManager = [[CLLocationManager alloc]init];
+    [self.locationManager setDelegate:self];
+    [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    
     
     
 }
@@ -182,6 +197,9 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         MapAnnotation *dropPin = [[MapAnnotation alloc] initWithLocation:locCoord];
 //        dropPin.latitude = locCoord.latitude;
 //        dropPin.coordinate.longitude = [NSNumber numberWithDouble:locCoord.longitude];
+        
+        
+        
         [self.mapView addAnnotation:dropPin];
         
     }

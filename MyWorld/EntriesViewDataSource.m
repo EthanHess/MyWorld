@@ -44,7 +44,6 @@ static NSString *const CellID = @"cellID";
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd MMM yyyy -- HH:mm"];
-//    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:162000];
     NSDate *date = entry.timestamp;
     NSString *formattedDateString = [dateFormatter stringFromDate:date];
     
