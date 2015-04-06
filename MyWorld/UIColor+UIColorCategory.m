@@ -12,7 +12,7 @@
 
 + (UIColor *)backgroundColor {
     
-    return [UIColor colorWithRed:0.1 green:0.2 blue:0.5 alpha:0.5];
+    return [UIColor colorWithRed:(35/255.0) green:(170/255.0) blue:(150/255.0) alpha:0.5];
     
 }
 
@@ -35,6 +35,11 @@
 + (UIColor *)darkGreen {
     
     return [UIColor colorWithRed:0.5 green:0.7 blue:0.85 alpha:1.0];
+}
+
++ (UIColor *)awesome {
+    
+    return [UIColor colorWithRed:(55/255.0) green:(145/255.0) blue:(225/255.0) alpha:1];
 }
 
 @end

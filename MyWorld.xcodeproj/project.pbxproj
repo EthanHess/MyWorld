@@ -32,6 +32,7 @@
 		27CEF7E11ACF50B100890179 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF7E01ACF50B100890179 /* Picture.m */; };
 		27CEF7E41ACF50B200890179 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF7E31ACF50B200890179 /* Entry.m */; };
 		27CEF7E71ACF50B200890179 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF7E61ACF50B200890179 /* Location.m */; };
+		27CEF8291AD2236F00890179 /* TravelPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CEF8281AD2236F00890179 /* TravelPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		27CEF7E31ACF50B200890179 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entry.m; path = ../Entry.m; sourceTree = "<group>"; };
 		27CEF7E51ACF50B200890179 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = ../Location.h; sourceTree = "<group>"; };
 		27CEF7E61ACF50B200890179 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = ../Location.m; sourceTree = "<group>"; };
+		27CEF8271AD2236F00890179 /* TravelPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelPickerViewController.h; sourceTree = "<group>"; };
+		27CEF8281AD2236F00890179 /* TravelPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,7 @@
 				27CEF5C81AC9DF2700890179 /* Location Files */,
 				27CEF5871AC60FDF00890179 /* Entry Files  */,
 				27CEF5881AC60FF800890179 /* Picture Files */,
+				27CEF8261AD2233B00890179 /* Travel Picker  */,
 				27CEF56A1AC6033B00890179 /* Main.storyboard */,
 				27CEF56D1AC6033B00890179 /* Images.xcassets */,
 				27CEF56F1AC6033B00890179 /* LaunchScreen.xib */,
@@ -244,6 +248,15 @@
 				27CEF7E61ACF50B200890179 /* Location.m */,
 			);
 			name = "Location Files";
+			sourceTree = "<group>";
+		};
+		27CEF8261AD2233B00890179 /* Travel Picker  */ = {
+			isa = PBXGroup;
+			children = (
+				27CEF8271AD2236F00890179 /* TravelPickerViewController.h */,
+				27CEF8281AD2236F00890179 /* TravelPickerViewController.m */,
+			);
+			name = "Travel Picker ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CEF6771ACB243200890179 /* EntryController.m in Sources */,
+				27CEF8291AD2236F00890179 /* TravelPickerViewController.m in Sources */,
 				27CEF7E41ACF50B200890179 /* Entry.m in Sources */,
 				27CEF6A11ACCABCC00890179 /* CollectionViewDataSource.m in Sources */,
 				27CEF58B1AC6122D00890179 /* Stack.m in Sources */,

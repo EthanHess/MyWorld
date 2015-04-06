@@ -10,6 +10,7 @@
 #import "PicturesViewController.h"
 #import "EntriesViewController.h"
 #import "UIColor+UIColorCategory.h"
+#import "TravelPickerViewController.h"
 #import "MapAnnotation.h"
 #import <math.h>
 @import CoreLocation;
@@ -132,6 +133,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)setUpToolbar {
     
     self.toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 75, self.view.frame.size.width, 75)];
+    self.toolbar.backgroundColor = [UIColor brownColor];
     [self.view addSubview:self.toolbar];
     
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:3];
@@ -226,7 +228,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)randomButtonPressed:(id)sender {
     
-    
+    TravelPickerViewController *travelPickerController = [TravelPickerViewController new];
+    [self.navigationController pushViewController:travelPickerController animated:YES];
 }
 
 - (void)shareButtonPressed:(id)sender {

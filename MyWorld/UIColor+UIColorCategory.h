@@ -18,6 +18,8 @@
 
 + (UIColor *)coolGreen;
 
-+ (UIColor *)darkGreen; 
++ (UIColor *)darkGreen;
+
++ (UIColor *)awesome; 
 
 @end
