@@ -19,6 +19,7 @@
 @property (nonatomic, strong) CalloutView *customView;
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) Location *location;
 
 
 @end

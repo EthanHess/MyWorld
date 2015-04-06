@@ -105,7 +105,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (NSArray *)countries {
     
-    return @[@"Austria", @"United States", @"Canada", @"Mexico", @"Spain"];
+    return @[@"Afghanistan",@"Albania",@"Algeria",@"Andorra",@"Angola",@"Antarctica",@"Argentina",@"Armenia",@"Aruba",@"Australia",@"Austria", @"Azerbaijan", @"United States", @"Canada", @"Mexico", @"Spain"];
     
 }
 

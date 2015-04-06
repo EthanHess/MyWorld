@@ -11,6 +11,7 @@
 #import "EntriesViewController.h"
 #import "UIColor+UIColorCategory.h"
 #import "TravelPickerViewController.h"
+#import "LocationController.h"
 #import "MapAnnotation.h"
 #import <math.h>
 @import CoreLocation;
@@ -195,13 +196,18 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         
         //add annotation here
         MapAnnotation *dropPin = [[MapAnnotation alloc] initWithLocation:locCoord];
-//        dropPin.latitude = locCoord.latitude;
-//        dropPin.coordinate.longitude = [NSNumber numberWithDouble:locCoord.longitude];
         
+        NSString *latitude = [NSString stringWithFormat:@"%f", dropPin.coordinate.latitude];
+        NSString *longitude = [NSString stringWithFormat:@"%f", dropPin.coordinate.longitude];
+        NSString *name = [NSString stringWithFormat:@"%@", self.customView.textField.text];
+        NSDate *date = self.location.date;
         
+        [[LocationController sharedInstance] addLocationWithName:name date:date latitude:latitude longitude:longitude];
+    
         
         [self.mapView addAnnotation:dropPin];
         
+        [self.mapView reloadInputViews]; 
     }
     
 }

@@ -44,7 +44,7 @@
     [self.view addSubview:self.addButton];
     
     self.clearButton = [[UIButton alloc]initWithFrame:CGRectMake(250, 335, 75, 50)];
-    [self.clearButton setTitle:@ " Clear " forState:UIControlStateNormal];
+    [self.clearButton setTitle:@" Clear " forState:UIControlStateNormal];
     [self.clearButton setBackgroundColor:[UIColor blueColor]];
     [self.clearButton addTarget:self action:@selector(clearFields:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.clearButton];
@@ -91,6 +91,7 @@
     [self clearFields]; 
     
 }
+
 
 - (void)clearFields:(id)sender {
     
