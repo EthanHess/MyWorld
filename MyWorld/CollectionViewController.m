@@ -56,6 +56,8 @@
     [alert show];
     
     self.arrayIndex = indexPath.item;
+    
+//    [[PictureController sharedInstance]removePicture:indexPath.item];
 
     
     

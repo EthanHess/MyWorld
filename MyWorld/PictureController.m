@@ -42,8 +42,6 @@
     
     picture.image = data;
     
-    //^^Fix here, make sure method gets passed data!
-    
     [self synchronize];
 
 }

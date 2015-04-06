@@ -34,6 +34,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)setUpDestinationLabel {
     
+    self.destinationLabel = [[UILabel alloc] initWithFrame: CGRectMake(25, self.view.frame.size.height/2 - 150, 300, 150)];
+    
+    self.destinationLabel.font = [UIFont fontWithName:@"Chalkduster" size:60];
+    self.destinationLabel.textColor = [UIColor brownColor];
+    self.destinationLabel.textAlignment = NSTextAlignmentCenter;
+    self.destinationLabel.adjustsFontSizeToFitWidth = YES;
+    [self.view addSubview:self.destinationLabel];
     
     
 }
@@ -57,6 +64,27 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)newCountryButtonPressed {
     
+    self.destinationLabel.text = @"Where to?";
+    [self growsOnTouch:self.destinationLabel withDuration:2];
+    [self.pickerButton setEnabled:NO];
+    [self.pickerButton setTitle:@"Drumroll!!" forState:UIControlStateDisabled];
+    [self.pickerButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    
+    [self performSelector:@selector(updateDestinationLabel) withObject:nil afterDelay:2];
+    
+}
+
+- (void)updateDestinationLabel {
+    
+    NSArray *array = [self countries];
+    
+    [self shuffle:array];
+    
+    NSString *country = array[0];
+        
+    self.destinationLabel.text = [NSString stringWithFormat:@"%@", country];
+    
+    [self.pickerButton setEnabled:YES];
     
 }
 
@@ -77,7 +105,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (NSArray *)countries {
     
-    return @[@"United States", @"Canada", @"Mexico", @"Spain"];
+    return @[@"Austria", @"United States", @"Canada", @"Mexico", @"Spain"];
     
 }
 
