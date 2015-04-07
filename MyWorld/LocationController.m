@@ -44,8 +44,29 @@
     
     [self synchronize];
     
+    [[LocationController sharedInstance].locations arrayByAddingObject:location];
+    
     
 }
+
+
+
+- (void)addLocationWithPicture:(Picture *)picture toLocation:(Location *)location {
+    
+    
+    
+    
+    
+    
+}
+
+- (void)addLocationWithEntry:(Entry *)entry toLocation:(Location *)location {
+    
+    
+    
+    
+}
+
 
 - (void)removeLocation:(Location *)location {
     

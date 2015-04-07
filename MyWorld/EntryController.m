@@ -21,14 +21,6 @@
     
 }
 
-- (CKDatabase *)database {
-    
-    CKDatabase *database = [[CKContainer defaultContainer] privateCloudDatabase];
-    
-    return database;
-    
-}
-
 
 - (NSArray *)entries {
     

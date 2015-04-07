@@ -10,7 +10,6 @@
 #import "Stack.h" 
 #import "Entry.h"
 #import "Location.h"
-#import <CloudKit/CloudKit.h>
 
 @interface EntryController : NSObject
 
@@ -19,8 +18,6 @@
 @property (nonatomic, strong) Location *location;
 
 + (EntryController *)sharedInstance;
-
-- (CKDatabase *)database;
 
 - (void)addEntryWithEntryTitle:(NSString *)title entryText:(NSString *)entryText timestamp: (NSDate *)timestamp; 
 

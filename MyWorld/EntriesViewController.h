@@ -17,5 +17,6 @@
 @property (nonatomic, strong) UIButton *clearButton;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) EntriesViewDataSource *dataSource;
+@property (nonatomic, strong) Location *location; 
 
 @end

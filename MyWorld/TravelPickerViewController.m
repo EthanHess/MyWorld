@@ -76,13 +76,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)updateDestinationLabel {
     
-    NSArray *array = [self countries];
+    NSArray *arrayOfCountries = [self countries];
+    int randomNumber = arc4random() % [self countries].count;
+//    [self shuffle:array];
     
-    [self shuffle:array];
+//    NSString *country = [self shuffle:array][0];
     
-    NSString *country = array[0];
-        
-    self.destinationLabel.text = [NSString stringWithFormat:@"%@", country];
+    self.destinationLabel.text = [NSString stringWithFormat:@"%@", arrayOfCountries[randomNumber]];
     
     [self.pickerButton setEnabled:YES];
     
@@ -105,7 +105,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (NSArray *)countries {
     
-    return @[@"Afghanistan",@"Albania",@"Algeria",@"Andorra",@"Angola",@"Antarctica",@"Argentina",@"Armenia",@"Aruba",@"Australia",@"Austria", @"Azerbaijan", @"United States", @"Canada", @"Mexico", @"Spain"];
+    return @[@"Afghanistan",@"Albania",@"Algeria",@"Andorra",@"Angola",@"Antarctica",@"Argentina",@"Armenia",@"Aruba",@"Australia",@"Austria", @"Azerbaijan", @"Bahamas", @"Bahrain", @"Bangladesh", @"Barbados", @"Belarus", @"Belgium", @"Belize", @"Benin", @"Bhutan", @"Bolivia", @"Bosnia and Herzegovina", @"Botswana", @"Brazil", @"British Virgin Islands", @"Brunei", @"Bulgaria", @"Burkina Faso", @"Burma", @"Burundi", @"Cambodia",@"Cameroon",@"Canada", @"Cape Verde", @"Cayman Islands", @"Central African Republic", @"Chad", @"Chile", @"China", @"Colombia", @"Congo", @"Coasta Rica", @"Croatia", @"Cuba",@"Cyprus", @"Czech Republic", @"Denmark", @"Djibouti", @"Dominican Republic", @"Ecuador", @"Egypt", @"El Salvador",@"Estonia",@"Ethiopia",@"Fiji",@"Finland",@"France",@"French Guiana",@"French Polynesia",@"Gabon",@"Gambia",@"Georgia", @"Germany",@"Ghana",@"Greece",@"Greenland",@"Guam",@"Guatemala",@"Guyana",@"Haiti",@"Honduras",@"Hong Kong",@"Hungary",@"Iceland",@"India",@"Indonesia",@"Iran",@"Iraq",@"Ireland", @"Israel", @"Italy", @"Ivory Coast", @"Jamaica", @"Japan",@"Jordan", @"Kazakhstan", @"Kenya", @"Kuwait", @"Kyrgystan", @"Laos", @"Latvia", @"Lebanon", @"Lesotho", @"Liberia", @"Libya", @"Liechtenstein", @"Lithuania", @"Luxembourg", @"Macau", @"Macedonia", @"Madagascar", @"Malawi", @"Malaysia", @"Maldives", @"Mali", @"Malta", @"Mauritania", @"Mexico", @"Moldova", @"Mongolia", @"Morocco", @"Mozambique", @"Namibia", @"Nepal", @"Netherlands", @"New Zealand", @"Nicaragua", @"Niger", @"Nigeria", @"North Korea", @"Norway", @"Oman", @"Pakistan", @"Panama", @"Paraguay", @"Peru", @"Philippines", @"Poland", @"Portugal", @"Puerto Rico", @"Qatar", @"Romania", @"Russia", @"Rwanda", @"Samoa", @"Saudi Arabia", @"Senegal", @"Serbia and Montenegro", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"Spain", @"South Korea", @"United States"];
     
 }
 

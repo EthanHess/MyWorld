@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Location.h"
 
 @interface PicturesViewController : UIViewController
 
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) UIImage *chosenImage;
 @property (nonatomic, strong) UIButton *searchImageButton;
 @property (nonatomic, strong) UIButton *savePictureButton;
-@property (nonatomic, strong) UIButton *savedImages; 
+@property (nonatomic, strong) UIButton *savedImages;
+@property (nonatomic, strong) Location *location;
 
 @end

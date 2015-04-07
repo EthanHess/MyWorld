@@ -22,6 +22,12 @@
     [self.tableView reloadData]; 
 }
 
+- (void)updateWithLocation:(Location *)location {
+    
+    self.location = location;
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

@@ -17,6 +17,12 @@
 
 @implementation PicturesViewController
 
+- (void)updateWithLocation:(Location *)location {
+    
+    self.location = location;
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

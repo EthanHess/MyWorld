@@ -57,13 +57,11 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)setUpLocationManager {
     
+    
     self.locationManager = [[CLLocationManager alloc]init];
     [self.locationManager setDelegate:self];
     [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
     [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    
-    
-    
     
 }
 
