@@ -49,10 +49,27 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
     [self registerForNotificaitons];
     
-    [self setUpLocationManager]; 
+    [self setUpLocationManager];
+    
+    [self settingAnnotations];
     
     
+}
+
+- (void)settingAnnotations {
+    NSArray *locations = [LocationController sharedInstance].locations;
     
+    for (Location *location in locations) {
+        double latitutedDouble = [location.latitude doubleValue];
+        double longitudeDouble = [location.longitute doubleValue];
+        
+        CLLocationCoordinate2D locCoord = CLLocationCoordinate2DMake(latitutedDouble, longitudeDouble);
+        
+        //add annotation here
+        MapAnnotation *dropPin = [[MapAnnotation alloc] initWithLocation:locCoord];
+        [self.mapView addAnnotation:dropPin];
+        
+    }
 }
 
 - (void)setUpLocationManager {

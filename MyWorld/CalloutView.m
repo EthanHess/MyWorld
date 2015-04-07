@@ -73,6 +73,11 @@
 
 }
 
+- (void)removeLocation: (id)sender {
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"removeButtonPressed" object:nil]; 
+}
+
 - (void)cancelPressed:(id)sender {
 
     [self setHidden:YES];

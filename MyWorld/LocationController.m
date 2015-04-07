@@ -8,6 +8,8 @@
 
 #import "LocationController.h"
 #import "Stack.h"
+#import "Picture.h"
+#import "Entry.h"
 @import CoreData;
 
 @implementation LocationController
@@ -42,30 +44,30 @@
     location.latitude = latitude;
     location.longitute = longitude;
     
-    [self synchronize];
-    
     [[LocationController sharedInstance].locations arrayByAddingObject:location];
     
-    
-}
-
-
-
-- (void)addLocationWithPicture:(Picture *)picture toLocation:(Location *)loc {
-    
-    Picture *pic = [NSEntityDescription insertNewObjectForEntityForName:@"Picture" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-    
-    
-    
+    [self synchronize];
     
     
     
 }
 
-- (void)addLocationWithEntry:(Entry *)entry toLocation:(Location *)loc {
+
+
+- (void)addLocationWithPicture:(Picture *)picture toLocation:(Location *)location {
+    
+    picture.location = location;
+    
+    [self synchronize]; 
     
     
+}
+
+- (void)addLocationWithEntry:(Entry *)entry toLocation:(Location *)location {
     
+    entry.location = location;
+    
+    [self synchronize];
     
 }
 
