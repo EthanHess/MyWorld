@@ -10,6 +10,7 @@
 #import "UIColor+UIColorCategory.h"
 #import "EntriesViewController.h"
 #import "PicturesViewController.h"
+#import "LocationController.h"
 
 
 @implementation CalloutView
@@ -21,8 +22,10 @@
         
         self.backgroundColor = [UIColor coolGreen];
         
+        NSString *loc = [NSString stringWithFormat:@"%@", self.textField.text];
+        
         self.locationLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 15, 150, 50)];
-        self.locationLabel.text = [NSString stringWithFormat:@"%@", self.location];
+        self.locationLabel.text = [NSString stringWithFormat:@"%@", loc];
         self.locationLabel.backgroundColor = [UIColor awesome];
         [self addSubview:self.locationLabel];
         
@@ -83,7 +86,9 @@
 
 - (void)removeLocation: (id)sender {
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"removeButtonPressed" object:nil];
+    [LocationController sharedInstance] removeLocation:<#(Location *)#>
+    
+//    [[NSNotificationCenter defaultCenter]postNotificationName:@"removeButtonPressed" object:nil];
 }
 
 - (void)cancelPressed:(id)sender {

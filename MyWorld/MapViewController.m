@@ -57,6 +57,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 }
 
 - (void)settingAnnotations {
+    
     NSArray *locations = [LocationController sharedInstance].locations;
     
     for (Location *location in locations) {
@@ -65,12 +66,12 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         
         CLLocationCoordinate2D locCoord = CLLocationCoordinate2DMake(latitutedDouble, longitudeDouble);
         
-        //add annotation here
         MapAnnotation *dropPin = [[MapAnnotation alloc] initWithLocation:locCoord];
         [self.mapView addAnnotation:dropPin];
         
     }
 }
+
 
 - (void)setUpLocationManager {
     
@@ -86,7 +87,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showEntryView) name:@"entriesButtonPressed" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showPictureView) name:@"picturesButtonPressed" object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeAnnotation) name:@"removeButtonPressed" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeAnnotation:) name:@"removeButtonPressed" object:nil];
 }
 
 - (void)animateLabel:(UIView *)view duration:(float)duration {
@@ -122,28 +123,28 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 -(void)searchBarPressed:(UISearchBar *)searchBar {
     
-    [searchBar resignFirstResponder];
-    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-    [geocoder geocodeAddressString:searchBar.text completionHandler:^(NSArray *placemarks, NSError *error) {
-        
-        
-        CLPlacemark *placemark = [placemarks objectAtIndex:0];
-        MKCoordinateRegion region;
-        region.center.latitude = placemark.region.center.latitude;
-        region.center.longitude = placemark.region.center.longitude;
-        MKCoordinateSpan span;
-        double radius = placemark.region.radius / 1000;
-        
-//        CLCircularRegion *region = [CLCircularRegion alloc] initWithCenter:<#(CLLocationCoordinate2D)#> radius:<#(CLLocationDistance)#> identifier:<#(NSString *)#>
-        
-        NSLog(@"[searchBarSearchButtonClicked] Radius is %f", radius);
-        span.latitudeDelta = radius / 112.0;
-        
-        region.span = span;
-        
-        [self.mapView setRegion:region animated:YES];
-        
-    }];
+//    [searchBar resignFirstResponder];
+//    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+//    [geocoder geocodeAddressString:searchBar.text completionHandler:^(NSArray *placemarks, NSError *error) {
+//        
+//        
+//        CLPlacemark *placemark = [placemarks objectAtIndex:0];
+//        MKCoordinateRegion region;
+//        region.center.latitude = placemark.region.center.latitude;
+//        region.center.longitude = placemark.region.center.longitude;
+//        MKCoordinateSpan span;
+//        double radius = placemark.region.radius / 1000;
+//        
+////        CLCircularRegion *region = [CLCircularRegion alloc] initWithCenter:<#(CLLocationCoordinate2D)#> radius:<#(CLLocationDistance)#> identifier:<#(NSString *)#>
+//        
+//        NSLog(@"[searchBarSearchButtonClicked] Radius is %f", radius);
+//        span.latitudeDelta = radius / 112.0;
+//        
+//        region.span = span;
+//        
+//        [self.mapView setRegion:region animated:YES];
+//        
+//    }];
     
     
 }
@@ -231,7 +232,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
     
     self.customView = [[CalloutView alloc]initWithFrame:CGRectMake(0, 0, 170, 275)];
-    
+//    mapView.selectedAnnotations.lastObject.
 //    [view addSubview:self.customView];
     [self.customView setHidden:NO];
     [mapView addSubview:self.customView];
@@ -252,11 +253,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
 }
 
-- (void)removeAnnotation {
-    
-    
-    
-}
 
 - (void)showPictureView {
     

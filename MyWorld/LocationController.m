@@ -49,9 +49,7 @@
     [self synchronize];
     
     
-    
 }
-
 
 
 - (void)addLocationWithPicture:(Picture *)picture toLocation:(Location *)location {
