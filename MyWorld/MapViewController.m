@@ -86,6 +86,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showEntryView) name:@"entriesButtonPressed" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showPictureView) name:@"picturesButtonPressed" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeAnnotation) name:@"removeButtonPressed" object:nil];
 }
 
 - (void)animateLabel:(UIView *)view duration:(float)duration {
@@ -248,6 +249,12 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     EntriesViewController *entriesViewController = [EntriesViewController new];
     [self.navigationController pushViewController:entriesViewController animated:YES];
+    
+}
+
+- (void)removeAnnotation {
+    
+    
     
 }
 

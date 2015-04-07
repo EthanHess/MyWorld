@@ -45,12 +45,20 @@
         [self.seePictures addTarget:self action:@selector(picturesPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.seePictures];
         
-        self.cancelButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 215, 150, 50)];
+        self.cancelButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 215, 70, 50)];
         [self.cancelButton setTitle:@" Cancel " forState:UIControlStateNormal];
         [self.cancelButton setBackgroundColor:[UIColor awesome]];
         [self.cancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.cancelButton addTarget:self action:@selector(cancelPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.cancelButton];
+        
+        self.removeButton = [[UIButton alloc]initWithFrame:CGRectMake(90, 215, 70, 50)];
+        [self.removeButton setTitle:@" Delete " forState:UIControlStateNormal];
+        [self.removeButton setBackgroundColor:[UIColor awesome]];
+        [self.removeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.removeButton addTarget:self action:@selector(removeLocation:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:self.removeButton];
+        
         
         
         
@@ -75,7 +83,7 @@
 
 - (void)removeLocation: (id)sender {
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"removeButtonPressed" object:nil]; 
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"removeButtonPressed" object:nil];
 }
 
 - (void)cancelPressed:(id)sender {
