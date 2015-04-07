@@ -51,7 +51,9 @@
 
 
 
-- (void)addLocationWithPicture:(Picture *)picture toLocation:(Location *)location {
+- (void)addLocationWithPicture:(Picture *)picture toLocation:(Location *)loc {
+    
+    Picture *pic = [NSEntityDescription insertNewObjectForEntityForName:@"Picture" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     
     
     
@@ -60,7 +62,7 @@
     
 }
 
-- (void)addLocationWithEntry:(Entry *)entry toLocation:(Location *)location {
+- (void)addLocationWithEntry:(Entry *)entry toLocation:(Location *)loc {
     
     
     
