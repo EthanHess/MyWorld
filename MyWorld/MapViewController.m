@@ -152,7 +152,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)setUpMapView {
     
     self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(15, 150, self.view.frame.size.width - 30, 300)];
-    [self.mapView setMapType:MKMapTypeSatellite];
+    [self.mapView setMapType:MKMapTypeHybrid];
     self.mapView.delegate = self;
     [self.view addSubview:self.mapView];
     [self.view sendSubviewToBack:self.mapView];

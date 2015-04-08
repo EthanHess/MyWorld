@@ -16,7 +16,8 @@
 @property (nonatomic, strong) UIButton *seePictures;
 @property (nonatomic, strong) UIButton *cancelButton;
 @property (nonatomic, strong) UIButton *removeButton;
-@property (nonatomic, strong) UILabel *locationLabel; 
+@property (nonatomic, strong) UILabel *locationLabel;
+@property (nonatomic, strong) UIButton *saveButton; 
 @property (nonatomic, strong) Location *location; 
 
 @end

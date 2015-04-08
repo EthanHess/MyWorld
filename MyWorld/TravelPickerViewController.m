@@ -37,7 +37,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     self.destinationLabel = [[UILabel alloc] initWithFrame: CGRectMake(25, self.view.frame.size.height/2 - 150, 300, 150)];
     
     self.destinationLabel.font = [UIFont fontWithName:@"Chalkduster" size:60];
-    self.destinationLabel.textColor = [UIColor brownColor];
+    self.destinationLabel.textColor = [UIColor textLabelColor];
     self.destinationLabel.textAlignment = NSTextAlignmentCenter;
     self.destinationLabel.adjustsFontSizeToFitWidth = YES;
     [self.view addSubview:self.destinationLabel];
