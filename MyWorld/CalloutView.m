@@ -84,9 +84,9 @@
 
 }
 
-- (void)removeLocation: (id)sender {
+- (void)removeLocation:(id)sender {
     
-    [LocationController sharedInstance] removeLocation:<#(Location *)#>
+    [[LocationController sharedInstance] removeLocation:self.location];
     
 //    [[NSNotificationCenter defaultCenter]postNotificationName:@"removeButtonPressed" object:nil];
 }

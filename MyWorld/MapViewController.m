@@ -211,7 +211,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         CGPoint point = [sender locationInView:self.mapView];
         CLLocationCoordinate2D locCoord = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
         
-        //add annotation here
         MapAnnotation *dropPin = [[MapAnnotation alloc] initWithLocation:locCoord];
         
         NSString *latitude = [NSString stringWithFormat:@"%f", dropPin.coordinate.latitude];
@@ -232,8 +231,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
     
     self.customView = [[CalloutView alloc]initWithFrame:CGRectMake(0, 0, 170, 275)];
-//    mapView.selectedAnnotations.lastObject.
-//    [view addSubview:self.customView];
+
     [self.customView setHidden:NO];
     [mapView addSubview:self.customView];
     
